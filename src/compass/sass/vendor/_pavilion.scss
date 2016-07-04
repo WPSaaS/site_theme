@@ -1,0 +1,15 @@
+// Mixins & variables first
+@import "pavilion/scss/parts/variables";
+@import "pavilion/scss/parts/mixins";
+
+// Core parts
+//@import "pavilion/scss/parts/normalize";
+@import "pavilion/scss/parts/base";
+@import "pavilion/scss/parts/grid";
+@import "pavilion/scss/parts/flexbox";
+//@import "pavilion/scss/parts/typography";
+@import "pavilion/scss/parts/helpers";
+@import "pavilion/scss/parts/buttons";
+//@import "pavilion/scss/parts/lists";
+//@import "pavilion/scss/parts/forms";
+//@import "pavilion/scss/parts/tables";
