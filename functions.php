@@ -11,8 +11,8 @@
  * functions.php file. The child theme's functions.php file is included before
  * the parent theme's file, so the child theme functions would be used.
  *
- * @link https://codex.wordpress.org/Theme_Development
- * @link https://codex.wordpress.org/Child_Themes
+ * @link       https://codex.wordpress.org/Theme_Development
+ * @link       https://codex.wordpress.org/Child_Themes
  *
  * Functions that are not pluggable (not wrapped in function_exists()) are
  * instead attached to a filter or action hook.
@@ -20,9 +20,9 @@
  * For more information on hooks, actions, and filters,
  * {@link https://codex.wordpress.org/Plugin_API}
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage WPSaaS
- * @since WP SaaS 1.0
+ * @since      WP SaaS 1.0
  */
 
 /**
@@ -33,100 +33,100 @@ if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 }
 
 if ( ! function_exists( 'wpsaas_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- *
- * Create your own wpsaas_setup() function to override in a child theme.
- *
- * @since WP SaaS 1.0
- */
-function wpsaas_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on WP SaaS, use a find and replace
-	 * to change 'wpsaas' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'wpsaas', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for custom logo.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 *  @since WP SaaS 1.2
-	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 240,
-		'width'       => 240,
-		'flex-height' => true,
-	) );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 1200, 9999 );
-
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'wpsaas' ),
-		'social'  => __( 'Social Links Menu', 'wpsaas' ),
-	) );
-
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
-
-	/*
-	 * Enable support for Post Formats.
+	 * Create your own wpsaas_setup() function to override in a child theme.
 	 *
-	 * See: https://codex.wordpress.org/Post_Formats
+	 * @since WP SaaS 1.0
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-		'gallery',
-		'status',
-		'audio',
-		'chat',
-	) );
+	function wpsaas_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on WP SaaS, use a find and replace
+		 * to change 'wpsaas' to the name of your theme in all the template files
+		 */
+		load_theme_textdomain( 'wpsaas', get_template_directory() . '/languages' );
 
-	/*
-	 * This theme styles the visual editor to resemble the theme style,
-	 * specifically font, colors, icons, and column width.
-	 */
-	add_editor_style( array( 'src/css/editor-style.css', wpsaas_fonts_url() ) );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	// Indicate widget sidebars can use selective refresh in the Customizer.
-	add_theme_support( 'customize-selective-refresh-widgets' );
-}
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
+
+		/*
+		 * Enable support for custom logo.
+		 *
+		 *  @since WP SaaS 1.2
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 240,
+			'width'       => 240,
+			'flex-height' => true,
+		) );
+
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 */
+		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 1200, 9999 );
+
+		// This theme uses wp_nav_menu() in two locations.
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'wpsaas' ),
+			'social'  => __( 'Social Links Menu', 'wpsaas' ),
+		) );
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+
+		/*
+		 * Enable support for Post Formats.
+		 *
+		 * See: https://codex.wordpress.org/Post_Formats
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+			'gallery',
+			'status',
+			'audio',
+			'chat',
+		) );
+
+		/*
+		 * This theme styles the visual editor to resemble the theme style,
+		 * specifically font, colors, icons, and column width.
+		 */
+		add_editor_style( array( 'src/css/editor-style.css', wpsaas_fonts_url() ) );
+
+		// Indicate widget sidebars can use selective refresh in the Customizer.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+	}
 endif; // wpsaas_setup
 add_action( 'after_setup_theme', 'wpsaas_setup' );
 
@@ -142,12 +142,13 @@ add_action( 'after_setup_theme', 'wpsaas_setup' );
 function wpsaas_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'wpsaas_content_width', 840 );
 }
+
 add_action( 'after_setup_theme', 'wpsaas_content_width', 0 );
 
 /**
  * Registers a widget area.
  *
- * @link https://developer.wordpress.org/reference/functions/register_sidebar/
+ * @link  https://developer.wordpress.org/reference/functions/register_sidebar/
  *
  * @since WP SaaS 1.0
  */
@@ -182,47 +183,48 @@ function wpsaas_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
+
 add_action( 'widgets_init', 'wpsaas_widgets_init' );
 
 if ( ! function_exists( 'wpsaas_fonts_url' ) ) :
-/**
- * Register Google fonts for WP SaaS.
- *
- * Create your own wpsaas_fonts_url() function to override in a child theme.
- *
- * @since WP SaaS 1.0
- *
- * @return string Google fonts URL for the theme.
- */
-function wpsaas_fonts_url() {
-	$fonts_url = '';
-	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
+	/**
+	 * Register Google fonts for WP SaaS.
+	 *
+	 * Create your own wpsaas_fonts_url() function to override in a child theme.
+	 *
+	 * @since WP SaaS 1.0
+	 *
+	 * @return string Google fonts URL for the theme.
+	 */
+	function wpsaas_fonts_url() {
+		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = 'latin,latin-ext';
 
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'wpsaas' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+		/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'wpsaas' ) ) {
+			$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+		}
+
+		/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
+		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'wpsaas' ) ) {
+			$fonts[] = 'Montserrat:400,700';
+		}
+
+		/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
+		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'wpsaas' ) ) {
+			$fonts[] = 'Inconsolata:400';
+		}
+
+		if ( $fonts ) {
+			$fonts_url = add_query_arg( array(
+				'family' => urlencode( implode( '|', $fonts ) ),
+				'subset' => urlencode( $subsets ),
+			), 'https://fonts.googleapis.com/css' );
+		}
+
+		return $fonts_url;
 	}
-
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'wpsaas' ) ) {
-		$fonts[] = 'Montserrat:400,700';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'wpsaas' ) ) {
-		$fonts[] = 'Inconsolata:400';
-	}
-
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
 endif;
 
 /**
@@ -235,6 +237,7 @@ endif;
 function wpsaas_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
+
 add_action( 'wp_head', 'wpsaas_javascript_detection', 0 );
 
 /**
@@ -287,6 +290,7 @@ function wpsaas_scripts() {
 		'collapse' => __( 'collapse child menu', 'wpsaas' ),
 	) );
 }
+
 add_action( 'wp_enqueue_scripts', 'wpsaas_scripts' );
 
 /**
@@ -295,6 +299,7 @@ add_action( 'wp_enqueue_scripts', 'wpsaas_scripts' );
  * @since WP SaaS 1.0
  *
  * @param array $classes Classes for the body element.
+ *
  * @return array (Maybe) filtered body classes.
  */
 function wpsaas_body_classes( $classes ) {
@@ -320,6 +325,7 @@ function wpsaas_body_classes( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class', 'wpsaas_body_classes' );
 
 /**
@@ -328,6 +334,7 @@ add_filter( 'body_class', 'wpsaas_body_classes' );
  * @since WP SaaS 1.0
  *
  * @param string $color The original color, in 3- or 6-digit hexadecimal form.
+ *
  * @return array Array containing RGB (red, green, and blue) values for the given
  *               HEX code, empty array otherwise.
  */
@@ -335,9 +342,9 @@ function wpsaas_hex2rgb( $color ) {
 	$color = trim( $color, '#' );
 
 	if ( strlen( $color ) === 3 ) {
-		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
-		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
-		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+		$r = hexdec( substr( $color, 0, 1 ) . substr( $color, 0, 1 ) );
+		$g = hexdec( substr( $color, 1, 1 ) . substr( $color, 1, 1 ) );
+		$b = hexdec( substr( $color, 2, 1 ) . substr( $color, 2, 1 ) );
 	} else if ( strlen( $color ) === 6 ) {
 		$r = hexdec( substr( $color, 0, 2 ) );
 		$g = hexdec( substr( $color, 2, 2 ) );
@@ -368,6 +375,7 @@ require get_template_directory() . '/inc/customizer.php';
  * @param string $sizes A source size value for use in a 'sizes' attribute.
  * @param array  $size  Image size. Accepts an array of width and height
  *                      values in pixels (in that order).
+ *
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
 function wpsaas_content_image_sizes_attr( $sizes, $size ) {
@@ -384,7 +392,8 @@ function wpsaas_content_image_sizes_attr( $sizes, $size ) {
 
 	return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'wpsaas_content_image_sizes_attr', 10 , 2 );
+
+add_filter( 'wp_calculate_image_sizes', 'wpsaas_content_image_sizes_attr', 10, 2 );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -392,9 +401,10 @@ add_filter( 'wp_calculate_image_sizes', 'wpsaas_content_image_sizes_attr', 10 , 
  *
  * @since WP SaaS 1.0
  *
- * @param array $attr Attributes for the image markup.
+ * @param array $attr       Attributes for the image markup.
  * @param int   $attachment Image attachment ID.
- * @param array $size Registered image size or flat array of height and width dimensions.
+ * @param array $size       Registered image size or flat array of height and width dimensions.
+ *
  * @return string A source size value for use in a post thumbnail 'sizes' attribute.
  */
 function wpsaas_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
@@ -402,9 +412,11 @@ function wpsaas_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 		is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
 		! is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px';
 	}
+
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'wpsaas_post_thumbnail_sizes_attr', 10 , 3 );
+
+add_filter( 'wp_get_attachment_image_attributes', 'wpsaas_post_thumbnail_sizes_attr', 10, 3 );
 
 /**
  * Modifies tag cloud widget arguments to have all tags in the widget same font size.
@@ -412,14 +424,17 @@ add_filter( 'wp_get_attachment_image_attributes', 'wpsaas_post_thumbnail_sizes_a
  * @since WP SaaS 1.1
  *
  * @param array $args Arguments for tag cloud widget.
+ *
  * @return array A new modified arguments.
  */
 function wpsaas_widget_tag_cloud_args( $args ) {
-	$args['largest'] = 1;
+	$args['largest']  = 1;
 	$args['smallest'] = 1;
-	$args['unit'] = 'em';
+	$args['unit']     = 'em';
+
 	return $args;
 }
+
 add_filter( 'widget_tag_cloud_args', 'wpsaas_widget_tag_cloud_args' );
 
 
@@ -448,10 +463,30 @@ function wpsaas_lightbox_replace( $content ) {
 
 add_filter( 'the_content', 'wpsaas_lightbox_replace', 12 );
 
-function wpsaas_add_title_attachment_link($link, $id = null) {
-	$id = intval( $id );
-	$_post = get_post( $id );
+function wpsaas_add_title_attachment_link( $link, $id = null ) {
+	$id         = intval( $id );
+	$_post      = get_post( $id );
 	$post_title = esc_attr( $_post->post_title );
-	return str_replace('<a href', '<a title="'. $post_title .'" href', $link);
+
+	return str_replace( '<a href', '<a title="' . $post_title . '" href', $link );
 }
-add_filter('wp_get_attachment_link', 'wpsaas_add_title_attachment_link', 10, 2);
+
+add_filter( 'wp_get_attachment_link', 'wpsaas_add_title_attachment_link', 10, 2 );
+
+
+if ( is_admin() ) {
+
+	// If we are using WP Emmet add a good error styling for code editor
+	function wpsaas_admin_styles() {
+		?>
+		<style type="text/css">
+			.cm-s-default .cm-error {
+				color:            #fff !important;
+				background-color: #a00 !important;
+			}
+		</style>
+	<?php
+	}
+
+	add_action('admin_print_styles', 'wpsaas_admin_styles');
+}
