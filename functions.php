@@ -277,6 +277,8 @@ function wpsaas_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'wpsaas-keyboard-image-navigation', get_template_directory_uri() . '/src/js/keyboard-image-navigation.js', array( 'jquery' ), '20160412' );
 	}
+	wp_enqueue_script( 'eproject-swipebox', get_stylesheet_directory_uri() . '/src/js/jquery.swipebox.min.js', array( 'jquery' ) );
+
 
 	wp_enqueue_script( 'wpsaas-script', get_template_directory_uri() . '/src/js/functions.js', array( 'jquery' ), '20160412', true );
 
@@ -419,3 +421,37 @@ function wpsaas_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'wpsaas_widget_tag_cloud_args' );
+
+
+function wpsaas_gallery_default_type_set_link( $settings ) {
+	$settings['galleryDefaults']['link'] = 'file';
+
+	return $settings;
+}
+
+add_filter( 'media_view_settings', 'wpsaas_gallery_default_type_set_link' );
+
+/**
+ * @param $content
+ *
+ * @return mixed
+ */
+function wpsaas_lightbox_replace( $content ) {
+
+	//a[rel^='prettyPhoto']
+	$pattern     = "/<a(.*?)href=('|\")([^>]*).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>(.*?)<\/a>/i";
+	$replacement = '<a$1href=$2$3.$4$5 class="colorbox prettyPhoto thumbnail" rel="prettyPhoto[gallery]" $6>$7</a>';
+	$content     = preg_replace( $pattern, $replacement, $content );
+
+	return $content;
+}
+
+add_filter( 'the_content', 'wpsaas_lightbox_replace', 12 );
+
+function wpsaas_add_title_attachment_link($link, $id = null) {
+	$id = intval( $id );
+	$_post = get_post( $id );
+	$post_title = esc_attr( $_post->post_title );
+	return str_replace('<a href', '<a title="'. $post_title .'" href', $link);
+}
+add_filter('wp_get_attachment_link', 'wpsaas_add_title_attachment_link', 10, 2);

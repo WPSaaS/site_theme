@@ -107,10 +107,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "media/media";
 
-//@import "vendor/pavilion";
+@import "vendor/swipebox";
 
 /********************************************************************
- = The actual CSS for the site   *********
+ = The actual custom CSS for the site   *********
 *********************************************************************/
 
 @import "custom";

@@ -1,20 +1,46 @@
-/*
+/*!
 Theme Name: WPSaaS
-Theme URI: https://wordpress.org/themes/wpsaas/
-Author: the WordPress team
-Author URI: https://wordpress.org/
-Description: WPSaaS is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. WPSaaS will make your WordPress look beautiful everywhere.
-Version: 1.2
+Theme URI: http://underscores.me/
+Author: Jeff Behnke
+Author URI: http://validwebs.com
+Description: Custom theme: WPSaaS, developed by Jeff Behnke
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Text Domain: wpsaas
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
+
+WPSaaS is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-
-
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
 /**
  * Table of Contents
  *
@@ -49,25 +75,25 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *    14.5 - >= 1200px
  * 15.0 - Print
  */
-
-
 /**
  * 1.0 - Normalize
  *
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
-
+/* line 45, src/compass/sass/vendor/_twenty-sixteen.scss */
 html {
-	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
+/* line 51, src/compass/sass/vendor/_twenty-sixteen.scss */
 body {
-	margin: 0;
+  margin: 0;
 }
 
+/* line 55, src/compass/sass/vendor/_twenty-sixteen.scss */
 article,
 aside,
 details,
@@ -80,183 +106,213 @@ menu,
 nav,
 section,
 summary {
-	display: block;
+  display: block;
 }
 
+/* line 70, src/compass/sass/vendor/_twenty-sixteen.scss */
 audio,
 canvas,
 progress,
 video {
-	display: inline-block;
-	vertical-align: baseline;
+  display: inline-block;
+  vertical-align: baseline;
 }
 
+/* line 78, src/compass/sass/vendor/_twenty-sixteen.scss */
 audio:not([controls]) {
-	display: none;
-	height: 0;
+  display: none;
+  height: 0;
 }
 
+/* line 83, src/compass/sass/vendor/_twenty-sixteen.scss */
 [hidden],
 template {
-	display: none;
+  display: none;
 }
 
+/* line 88, src/compass/sass/vendor/_twenty-sixteen.scss */
 a {
-	background-color: transparent;
+  background-color: transparent;
 }
 
+/* line 92, src/compass/sass/vendor/_twenty-sixteen.scss */
 abbr[title] {
-	border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
+/* line 96, src/compass/sass/vendor/_twenty-sixteen.scss */
 b,
 strong {
-	font-weight: 700;
+  font-weight: 700;
 }
 
+/* line 101, src/compass/sass/vendor/_twenty-sixteen.scss */
 small {
-	font-size: 80%;
+  font-size: 80%;
 }
 
+/* line 105, src/compass/sass/vendor/_twenty-sixteen.scss */
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
+/* line 113, src/compass/sass/vendor/_twenty-sixteen.scss */
 sup {
-	top: -0.5em;
+  top: -0.5em;
 }
 
+/* line 117, src/compass/sass/vendor/_twenty-sixteen.scss */
 sub {
-	bottom: -0.25em;
+  bottom: -0.25em;
 }
 
+/* line 121, src/compass/sass/vendor/_twenty-sixteen.scss */
 img {
-	border: 0;
+  border: 0;
 }
 
+/* line 125, src/compass/sass/vendor/_twenty-sixteen.scss */
 svg:not(:root) {
-	overflow: hidden;
+  overflow: hidden;
 }
 
+/* line 129, src/compass/sass/vendor/_twenty-sixteen.scss */
 figure {
-	margin: 0;
+  margin: 0;
 }
 
+/* line 133, src/compass/sass/vendor/_twenty-sixteen.scss */
 hr {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
+/* line 139, src/compass/sass/vendor/_twenty-sixteen.scss */
 code,
 kbd,
 pre,
 samp {
-	font-size: 1em;
+  font-size: 1em;
 }
 
+/* line 146, src/compass/sass/vendor/_twenty-sixteen.scss */
 button,
 input,
 optgroup,
 select,
 textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
 }
 
+/* line 156, src/compass/sass/vendor/_twenty-sixteen.scss */
 select {
-	text-transform: none;
+  text-transform: none;
 }
 
+/* line 160, src/compass/sass/vendor/_twenty-sixteen.scss */
 button {
-	overflow: visible;
+  overflow: visible;
 }
 
+/* line 164, src/compass/sass/vendor/_twenty-sixteen.scss */
 button,
 input,
 select,
 textarea {
-	max-width: 100%;
+  max-width: 100%;
 }
 
+/* line 171, src/compass/sass/vendor/_twenty-sixteen.scss */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
+  -webkit-appearance: button;
+  cursor: pointer;
 }
 
+/* line 179, src/compass/sass/vendor/_twenty-sixteen.scss */
 button[disabled],
 html input[disabled] {
-	cursor: default;
-	opacity: .5;
+  cursor: default;
+  opacity: .5;
 }
 
+/* line 185, src/compass/sass/vendor/_twenty-sixteen.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+  border: 0;
+  padding: 0;
 }
 
+/* line 191, src/compass/sass/vendor/_twenty-sixteen.scss */
 input[type="checkbox"],
 input[type="radio"] {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin-right: 0.4375em;
-	padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0.4375em;
+  padding: 0;
 }
 
+/* line 200, src/compass/sass/vendor/_twenty-sixteen.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-	height: auto;
+  height: auto;
 }
 
+/* line 205, src/compass/sass/vendor/_twenty-sixteen.scss */
 input[type="search"] {
-	-webkit-appearance: textfield;
+  -webkit-appearance: textfield;
 }
 
+/* line 209, src/compass/sass/vendor/_twenty-sixteen.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
+/* line 214, src/compass/sass/vendor/_twenty-sixteen.scss */
 fieldset {
-	border: 1px solid #d1d1d1;
-	margin: 0 0 1.75em;
-	min-width: inherit;
-	padding: 0.875em;
+  border: 1px solid #d1d1d1;
+  margin: 0 0 1.75em;
+  min-width: inherit;
+  padding: 0.875em;
 }
 
+/* line 221, src/compass/sass/vendor/_twenty-sixteen.scss */
 fieldset > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 225, src/compass/sass/vendor/_twenty-sixteen.scss */
 legend {
-	border: 0;
-	padding: 0;
+  border: 0;
+  padding: 0;
 }
 
+/* line 230, src/compass/sass/vendor/_twenty-sixteen.scss */
 textarea {
-	overflow: auto;
-	vertical-align: top;
+  overflow: auto;
+  vertical-align: top;
 }
 
+/* line 235, src/compass/sass/vendor/_twenty-sixteen.scss */
 optgroup {
-	font-weight: bold;
+  font-weight: bold;
 }
-
 
 /**
  * 2.0 - Genericons
  */
-
+/* line 244, src/compass/sass/vendor/_twenty-sixteen.scss */
 .menu-item-has-children a:after,
 .social-navigation a:before,
 .dropdown-toggle:after,
@@ -267,315 +323,354 @@ optgroup {
 .pagination .nav-links:before,
 .pagination .nav-links:after,
 .search-submit:before {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	display: inline-block;
-	font-family: "Genericons";
-	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 1;
-	speak: none;
-	text-align: center;
-	text-decoration: inherit;
-	text-transform: none;
-	vertical-align: top;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "Genericons";
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  vertical-align: top;
 }
-
 
 /**
  * 3.0 - Typography
  */
-
+/* line 275, src/compass/sass/vendor/_twenty-sixteen.scss */
 body,
 button,
 input,
 select,
 textarea {
-	color: #1a1a1a;
-	font-family: Merriweather, Georgia, serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.75;
+  color: #1a1a1a;
+  font-family: Merriweather, Georgia, serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
+/* line 287, src/compass/sass/vendor/_twenty-sixteen.scss */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	clear: both;
-	font-weight: 700;
-	margin: 0;
-	text-rendering: optimizeLegibility;
+  clear: both;
+  font-weight: 700;
+  margin: 0;
+  text-rendering: optimizeLegibility;
 }
 
+/* line 299, src/compass/sass/vendor/_twenty-sixteen.scss */
 p {
-	margin: 0 0 1.75em;
+  margin: 0 0 1.75em;
 }
 
+/* line 303, src/compass/sass/vendor/_twenty-sixteen.scss */
 dfn,
 cite,
 em,
 i {
-	font-style: italic;
+  font-style: italic;
 }
 
+/* line 310, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote {
-	border: 0 solid #1a1a1a;
-	border-left-width: 4px;
-	color: #686868;
-	font-size: 19px;
-	font-size: 1.1875rem;
-	font-style: italic;
-	line-height: 1.4736842105;
-	margin: 0 0 1.4736842105em;
-	padding: 0 0 0 1.263157895em;
+  border: 0 solid #1a1a1a;
+  border-left-width: 4px;
+  color: #686868;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  font-style: italic;
+  line-height: 1.4736842105;
+  margin: 0 0 1.4736842105em;
+  padding: 0 0 0 1.263157895em;
 }
 
+/* line 322, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
+/* line 327, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: "";
+  content: "";
 }
 
+/* line 334, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote p {
-	margin-bottom: 1.4736842105em;
+  margin-bottom: 1.4736842105em;
 }
 
+/* line 338, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote cite,
 blockquote small {
-	color: #1a1a1a;
-	display: block;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.75;
+  color: #1a1a1a;
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
+/* line 347, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote cite:before,
 blockquote small:before {
-	content: "\2014\00a0";
+  content: "\2014\00a0";
 }
 
+/* line 352, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote em,
 blockquote i,
 blockquote cite {
-	font-style: normal;
+  font-style: normal;
 }
 
+/* line 358, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote strong,
 blockquote b {
-	font-weight: 400;
+  font-weight: 400;
 }
 
+/* line 363, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 367, src/compass/sass/vendor/_twenty-sixteen.scss */
 address {
-	font-style: italic;
-	margin: 0 0 1.75em;
+  font-style: italic;
+  margin: 0 0 1.75em;
 }
 
+/* line 372, src/compass/sass/vendor/_twenty-sixteen.scss */
 code,
 kbd,
 tt,
 var,
 samp,
 pre {
-	font-family: Inconsolata, monospace;
+  font-family: Inconsolata, monospace;
 }
 
+/* line 381, src/compass/sass/vendor/_twenty-sixteen.scss */
 pre {
-	border: 1px solid #d1d1d1;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.3125;
-	margin: 0 0 1.75em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.75em;
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
+  border: 1px solid #d1d1d1;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.3125;
+  margin: 0 0 1.75em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.75em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
+/* line 395, src/compass/sass/vendor/_twenty-sixteen.scss */
 code {
-	background-color: #d1d1d1;
-	padding: 0.125em 0.25em;
+  background-color: #d1d1d1;
+  padding: 0.125em 0.25em;
 }
 
+/* line 400, src/compass/sass/vendor/_twenty-sixteen.scss */
 abbr,
 acronym {
-	border-bottom: 1px dotted #d1d1d1;
-	cursor: help;
+  border-bottom: 1px dotted #d1d1d1;
+  cursor: help;
 }
 
+/* line 406, src/compass/sass/vendor/_twenty-sixteen.scss */
 mark,
 ins {
-	background: #007acc;
-	color: #fff;
-	padding: 0.125em 0.25em;
-	text-decoration: none;
+  background: #007acc;
+  color: #fff;
+  padding: 0.125em 0.25em;
+  text-decoration: none;
 }
 
+/* line 414, src/compass/sass/vendor/_twenty-sixteen.scss */
 big {
-	font-size: 125%;
+  font-size: 125%;
 }
-
 
 /**
  * 4.0 - Elements
  */
-
+/* line 423, src/compass/sass/vendor/_twenty-sixteen.scss */
 html {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* line 429, src/compass/sass/vendor/_twenty-sixteen.scss */
 *,
 *:before,
 *:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
+/* line 438, src/compass/sass/vendor/_twenty-sixteen.scss */
 body {
-	background: #1a1a1a;
-	/* Fallback for when there is no custom background color defined. */
+  background: #1a1a1a;
+  /* Fallback for when there is no custom background color defined. */
 }
 
+/* line 443, src/compass/sass/vendor/_twenty-sixteen.scss */
 hr {
-	background-color: #d1d1d1;
-	border: 0;
-	height: 1px;
-	margin: 0 0 1.75em;
+  background-color: #d1d1d1;
+  border: 0;
+  height: 1px;
+  margin: 0 0 1.75em;
 }
 
+/* line 450, src/compass/sass/vendor/_twenty-sixteen.scss */
 ul,
 ol {
-	margin: 0 0 1.75em 1.25em;
-	padding: 0;
+  margin: 0 0 1.75em 1.25em;
+  padding: 0;
 }
 
+/* line 456, src/compass/sass/vendor/_twenty-sixteen.scss */
 ul {
-	list-style: disc;
+  list-style: disc;
 }
 
+/* line 460, src/compass/sass/vendor/_twenty-sixteen.scss */
 ol {
-	list-style: decimal;
-	margin-left: 1.5em;
+  list-style: decimal;
+  margin-left: 1.5em;
 }
 
+/* line 465, src/compass/sass/vendor/_twenty-sixteen.scss */
 li > ul,
 li > ol {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 470, src/compass/sass/vendor/_twenty-sixteen.scss */
 dl {
-	margin: 0 0 1.75em;
+  margin: 0 0 1.75em;
 }
 
+/* line 474, src/compass/sass/vendor/_twenty-sixteen.scss */
 dt {
-	font-weight: 700;
+  font-weight: 700;
 }
 
+/* line 478, src/compass/sass/vendor/_twenty-sixteen.scss */
 dd {
-	margin: 0 0 1.75em;
+  margin: 0 0 1.75em;
 }
 
+/* line 482, src/compass/sass/vendor/_twenty-sixteen.scss */
 img {
-	height: auto;
-	/* Make sure images are scaled correctly. */
-	max-width: 100%;
-	/* Adhere to container width. */
-	vertical-align: middle;
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+  vertical-align: middle;
 }
 
+/* line 490, src/compass/sass/vendor/_twenty-sixteen.scss */
 del {
-	opacity: 0.8;
+  opacity: 0.8;
 }
 
+/* line 494, src/compass/sass/vendor/_twenty-sixteen.scss */
 table,
 th,
 td {
-	border: 1px solid #d1d1d1;
+  border: 1px solid #d1d1d1;
 }
 
+/* line 500, src/compass/sass/vendor/_twenty-sixteen.scss */
 table {
-	border-collapse: separate;
-	border-spacing: 0;
-	border-width: 1px 0 0 1px;
-	margin: 0 0 1.75em;
-	table-layout: fixed;
-	/* Prevents HTML tables from becoming too wide */
-	width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-width: 1px 0 0 1px;
+  margin: 0 0 1.75em;
+  table-layout: fixed;
+  /* Prevents HTML tables from becoming too wide */
+  width: 100%;
 }
 
+/* line 510, src/compass/sass/vendor/_twenty-sixteen.scss */
 caption,
 th,
 td {
-	font-weight: normal;
-	text-align: left;
+  font-weight: normal;
+  text-align: left;
 }
 
+/* line 517, src/compass/sass/vendor/_twenty-sixteen.scss */
 th {
-	border-width: 0 1px 1px 0;
-	font-weight: 700;
+  border-width: 0 1px 1px 0;
+  font-weight: 700;
 }
 
+/* line 522, src/compass/sass/vendor/_twenty-sixteen.scss */
 td {
-	border-width: 0 1px 1px 0;
+  border-width: 0 1px 1px 0;
 }
 
+/* line 526, src/compass/sass/vendor/_twenty-sixteen.scss */
 th,
 td {
-	padding: 0.4375em;
+  padding: 0.4375em;
 }
 
 /* Placeholder text color -- selectors need to be separate to work. */
+/* line 532, src/compass/sass/vendor/_twenty-sixteen.scss */
 ::-webkit-input-placeholder {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
+/* line 537, src/compass/sass/vendor/_twenty-sixteen.scss */
 :-moz-placeholder {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
+/* line 542, src/compass/sass/vendor/_twenty-sixteen.scss */
 ::-moz-placeholder {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	opacity: 1;
-	/* Since FF19 lowers the opacity of the placeholder by default */
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  opacity: 1;
+  /* Since FF19 lowers the opacity of the placeholder by default */
 }
 
+/* line 549, src/compass/sass/vendor/_twenty-sixteen.scss */
 :-ms-input-placeholder {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
-
 
 /**
  * 5.0 - Forms
  */
-
+/* line 559, src/compass/sass/vendor/_twenty-sixteen.scss */
 input {
-	line-height: normal;
+  line-height: normal;
 }
 
+/* line 563, src/compass/sass/vendor/_twenty-sixteen.scss */
 button,
 button[disabled]:hover,
 button[disabled]:focus,
@@ -588,18 +683,19 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
-	background: #1a1a1a;
-	border: 0;
-	border-radius: 2px;
-	color: #fff;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-weight: 700;
-	letter-spacing: 0.046875em;
-	line-height: 1;
-	padding: 0.84375em 0.875em 0.78125em;
-	text-transform: uppercase;
+  background: #1a1a1a;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.046875em;
+  line-height: 1;
+  padding: 0.84375em 0.875em 0.78125em;
+  text-transform: uppercase;
 }
 
+/* line 587, src/compass/sass/vendor/_twenty-sixteen.scss */
 button:hover,
 button:focus,
 input[type="button"]:hover,
@@ -608,17 +704,19 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-	background: #007acc;
+  background: #007acc;
 }
 
+/* line 598, src/compass/sass/vendor/_twenty-sixteen.scss */
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-	outline: thin dotted;
-	outline-offset: -4px;
+  outline: thin dotted;
+  outline-offset: -4px;
 }
 
+/* line 606, src/compass/sass/vendor/_twenty-sixteen.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -627,15 +725,16 @@ input[type="search"],
 input[type="tel"],
 input[type="number"],
 textarea {
-	background: #f7f7f7;
-	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-	border: 1px solid #d1d1d1;
-	border-radius: 2px;
-	color: #686868;
-	padding: 0.625em 0.4375em;
-	width: 100%;
+  background: #f7f7f7;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  color: #686868;
+  padding: 0.625em 0.4375em;
+  width: 100%;
 }
 
+/* line 623, src/compass/sass/vendor/_twenty-sixteen.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -644,95 +743,105 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-	background-color: #fff;
-	border-color: #007acc;
-	color: #1a1a1a;
-	outline: 0;
+  background-color: #fff;
+  border-color: #007acc;
+  color: #1a1a1a;
+  outline: 0;
 }
 
+/* line 637, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-password-form {
-	margin-bottom: 1.75em;
+  margin-bottom: 1.75em;
 }
 
+/* line 641, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-password-form label {
-	color: #686868;
-	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	letter-spacing: 0.076923077em;
-	line-height: 1.6153846154;
-	margin-bottom: 1.75em;
-	text-transform: uppercase;
+  color: #686868;
+  display: block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.076923077em;
+  line-height: 1.6153846154;
+  margin-bottom: 1.75em;
+  text-transform: uppercase;
 }
 
+/* line 653, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-password-form input[type="password"] {
-	margin-top: 0.4375em;
+  margin-top: 0.4375em;
 }
 
+/* line 657, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-password-form > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 661, src/compass/sass/vendor/_twenty-sixteen.scss */
 .search-form {
-	position: relative;
+  position: relative;
 }
 
+/* line 665, src/compass/sass/vendor/_twenty-sixteen.scss */
 input[type="search"].search-field {
-	border-radius: 2px 0 0 2px;
-	width: -webkit-calc(100% - 42px);
-	width: calc(100% - 42px);
+  border-radius: 2px 0 0 2px;
+  width: -webkit-calc(100% - 42px);
+  width: calc(100% - 42px);
 }
 
+/* line 671, src/compass/sass/vendor/_twenty-sixteen.scss */
 .search-submit:before {
-	content: "\f400";
-	font-size: 24px;
-	left: 2px;
-	line-height: 42px;
-	position: relative;
-	width: 40px;
+  content: "\f400";
+  font-size: 24px;
+  left: 2px;
+  line-height: 42px;
+  position: relative;
+  width: 40px;
 }
 
+/* line 680, src/compass/sass/vendor/_twenty-sixteen.scss */
 .search-submit {
-	border-radius: 0 2px 2px 0;
-	bottom: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 42px;
+  border-radius: 0 2px 2px 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px;
 }
-
 
 /**
  * 6.0 - Navigation
  */
-
 /**
  * 6.1 - Links
  */
-
+/* line 700, src/compass/sass/vendor/_twenty-sixteen.scss */
 a {
-	color: #007acc;
-	text-decoration: none;
+  color: #007acc;
+  text-decoration: none;
 }
 
+/* line 705, src/compass/sass/vendor/_twenty-sixteen.scss */
 a:hover,
 a:focus,
 a:active {
-	color: #686868;
+  color: #686868;
 }
 
+/* line 711, src/compass/sass/vendor/_twenty-sixteen.scss */
 a:focus {
-	outline: thin dotted;
+  outline: thin dotted;
 }
 
+/* line 715, src/compass/sass/vendor/_twenty-sixteen.scss */
 a:hover,
 a:active {
-	outline: 0;
+  outline: 0;
 }
 
+/* line 720, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content a,
 .entry-summary a,
 .taxonomy-description a,
@@ -742,9 +851,10 @@ a:active {
 .textwidget a,
 .entry-footer a:hover,
 .site-info a:hover {
-	box-shadow: 0 1px 0 0 currentColor;
+  box-shadow: 0 1px 0 0 currentColor;
 }
 
+/* line 732, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content a:hover,
 .entry-content a:focus,
 .entry-summary a:hover,
@@ -759,585 +869,674 @@ a:active {
 .pingback .comment-body > a:focus,
 .textwidget a:hover,
 .textwidget a:focus {
-	box-shadow: none;
+  box-shadow: none;
 }
-
 
 /**
  * 6.2 - Menus
  */
-
+/* line 754, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-header-menu {
-	display: none;
-	-webkit-flex: 0 1 100%;
-	-ms-flex: 0 1 100%;
-	flex: 0 1 100%;
-	margin: 0.875em 0;
+  display: none;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
+  margin: 0.875em 0;
 }
 
+/* line 762, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-header-menu.toggled-on,
 .no-js .site-header-menu {
-	display: block;
+  display: block;
 }
 
+/* line 767, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
+/* line 771, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-footer .main-navigation {
-	margin-bottom: 1.75em;
+  margin-bottom: 1.75em;
 }
 
+/* line 775, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation ul {
-	list-style: none;
-	margin: 0;
+  list-style: none;
+  margin: 0;
 }
 
+/* line 780, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation li {
-	border-top: 1px solid #d1d1d1;
-	position: relative;
+  border-top: 1px solid #d1d1d1;
+  position: relative;
 }
 
+/* line 785, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation a {
-	color: #1a1a1a;
-	display: block;
-	line-height: 1.3125;
-	outline-offset: -1px;
-	padding: 0.84375em 0;
+  color: #1a1a1a;
+  display: block;
+  line-height: 1.3125;
+  outline-offset: -1px;
+  padding: 0.84375em 0;
 }
 
+/* line 793, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 798, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
-	font-weight: 700;
+  font-weight: 700;
 }
 
+/* line 803, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation ul ul {
-	display: none;
-	margin-left: 0.875em;
+  display: none;
+  margin-left: 0.875em;
 }
 
+/* line 808, src/compass/sass/vendor/_twenty-sixteen.scss */
 .no-js .main-navigation ul ul {
-	display: block;
+  display: block;
 }
 
+/* line 812, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation ul .toggled-on {
-	display: block;
+  display: block;
 }
 
+/* line 816, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation .primary-menu {
-	border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
 }
 
+/* line 820, src/compass/sass/vendor/_twenty-sixteen.scss */
 .main-navigation .menu-item-has-children > a {
-	margin-right: 56px;
+  margin-right: 56px;
 }
 
+/* line 824, src/compass/sass/vendor/_twenty-sixteen.scss */
 .dropdown-toggle {
-	background-color: transparent;
-	border: 0;
-	border-radius: 0;
-	color: #1a1a1a;
-	content: "";
-	height: 48px;
-	padding: 0;
-	position: absolute;
-	right: 0;
-	text-transform: none;
-	top: 0;
-	width: 48px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #1a1a1a;
+  content: "";
+  height: 48px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-transform: none;
+  top: 0;
+  width: 48px;
 }
 
+/* line 839, src/compass/sass/vendor/_twenty-sixteen.scss */
 .dropdown-toggle:after {
-	border: 0 solid #d1d1d1;
-	border-left-width: 1px;
-	content: "\f431";
-	font-size: 24px;
-	left: 1px;
-	position: relative;
-	width: 48px;
+  border: 0 solid #d1d1d1;
+  border-left-width: 1px;
+  content: "\f431";
+  font-size: 24px;
+  left: 1px;
+  position: relative;
+  width: 48px;
 }
 
+/* line 849, src/compass/sass/vendor/_twenty-sixteen.scss */
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
-	background-color: transparent;
-	color: #007acc;
+  background-color: transparent;
+  color: #007acc;
 }
 
+/* line 855, src/compass/sass/vendor/_twenty-sixteen.scss */
 .dropdown-toggle:focus {
-	outline: thin dotted;
-	outline-offset: -1px;
+  outline: thin dotted;
+  outline-offset: -1px;
 }
 
+/* line 860, src/compass/sass/vendor/_twenty-sixteen.scss */
 .dropdown-toggle:focus:after {
-	border-color: transparent;
+  border-color: transparent;
 }
 
+/* line 864, src/compass/sass/vendor/_twenty-sixteen.scss */
 .dropdown-toggle.toggled-on:after {
-	content: "\f432";
+  content: "\f432";
 }
 
+/* line 868, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-header .main-navigation + .social-navigation {
-	margin-top: 1.75em;
+  margin-top: 1.75em;
 }
 
+/* line 872, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-footer .social-navigation {
-	margin-bottom: 1.75em;
+  margin-bottom: 1.75em;
 }
 
+/* line 876, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation ul {
-	list-style: none;
-	margin: 0 0 -0.4375em;
+  list-style: none;
+  margin: 0 0 -0.4375em;
 }
 
+/* line 881, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation li {
-	float: left;
-	margin: 0 0.4375em 0.4375em 0;
+  float: left;
+  margin: 0 0.4375em 0.4375em 0;
 }
 
+/* line 886, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a {
-	border: 1px solid #d1d1d1;
-	border-radius: 50%;
-	color: #1a1a1a;
-	display: block;
-	height: 35px;
-	position: relative;
-	width: 35px;
+  border: 1px solid #d1d1d1;
+  border-radius: 50%;
+  color: #1a1a1a;
+  display: block;
+  height: 35px;
+  position: relative;
+  width: 35px;
 }
 
+/* line 896, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a:before {
-	content: "\f415";
-	height: 33px;
-	line-height: 33px;
-	text-align: center;
-	width: 33px;
+  content: "\f415";
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  width: 33px;
 }
 
+/* line 904, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a:hover:before,
 .social-navigation a:focus:before {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 909, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="codepen.io"]:before {
-	content: "\f216";
+  content: "\f216";
 }
 
+/* line 913, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="digg.com"]:before {
-	content: "\f221";
+  content: "\f221";
 }
 
+/* line 917, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="dribbble.com"]:before {
-	content: "\f201";
+  content: "\f201";
 }
 
+/* line 921, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="dropbox.com"]:before {
-	content: "\f225";
+  content: "\f225";
 }
 
+/* line 925, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="facebook.com"]:before {
-	content: "\f203";
+  content: "\f203";
 }
 
+/* line 929, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="flickr.com"]:before {
-	content: "\f211";
+  content: "\f211";
 }
 
+/* line 933, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="foursquare.com"]:before {
-	content: "\f226";
+  content: "\f226";
 }
 
+/* line 937, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="plus.google.com"]:before {
-	content: "\f206";
+  content: "\f206";
 }
 
+/* line 941, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="github.com"]:before {
-	content: "\f200";
+  content: "\f200";
 }
 
+/* line 945, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="instagram.com"]:before {
-	content: "\f215";
+  content: "\f215";
 }
 
+/* line 949, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="linkedin.com"]:before {
-	content: "\f208";
+  content: "\f208";
 }
 
+/* line 953, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="path.com"]:before {
-	content: "\f219";
+  content: "\f219";
 }
 
+/* line 957, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="pinterest.com"]:before {
-	content: "\f210";
+  content: "\f210";
 }
 
+/* line 961, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="getpocket.com"]:before {
-	content: "\f224";
+  content: "\f224";
 }
 
+/* line 965, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="polldaddy.com"]:before {
-	content: "\f217";
+  content: "\f217";
 }
 
+/* line 969, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="reddit.com"]:before {
-	content: "\f222";
+  content: "\f222";
 }
 
+/* line 973, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="skype.com"]:before {
-	content: "\f220";
+  content: "\f220";
 }
 
+/* line 977, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="stumbleupon.com"]:before {
-	content: "\f223";
+  content: "\f223";
 }
 
+/* line 981, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="tumblr.com"]:before {
-	content: "\f214";
+  content: "\f214";
 }
 
+/* line 985, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="twitter.com"]:before {
-	content: "\f202";
+  content: "\f202";
 }
 
+/* line 989, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="vimeo.com"]:before {
-	content: "\f212";
+  content: "\f212";
 }
 
+/* line 993, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="wordpress.com"]:before,
 .social-navigation a[href*="wordpress.org"]:before {
-	content: "\f205";
+  content: "\f205";
 }
 
+/* line 998, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="youtube.com"]:before {
-	content: "\f213";
+  content: "\f213";
 }
 
+/* line 1002, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href^="mailto:"]:before {
-	content: "\f410";
+  content: "\f410";
 }
 
+/* line 1006, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="spotify.com"]:before {
-	content: "\f515";
+  content: "\f515";
 }
 
+/* line 1010, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href*="twitch.tv"]:before {
-	content: "\f516";
+  content: "\f516";
 }
 
+/* line 1014, src/compass/sass/vendor/_twenty-sixteen.scss */
 .social-navigation a[href$="/feed/"]:before {
-	content: "\f413";
+  content: "\f413";
 }
 
+/* line 1018, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation {
-	border-top: 4px solid #1a1a1a;
-	border-bottom: 4px solid #1a1a1a;
-	clear: both;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	margin: 0 7.6923% 3.5em;
+  border-top: 4px solid #1a1a1a;
+  border-bottom: 4px solid #1a1a1a;
+  clear: both;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  margin: 0 7.6923% 3.5em;
 }
 
+/* line 1026, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation a {
-	color: #1a1a1a;
-	display: block;
-	padding: 1.75em 0;
+  color: #1a1a1a;
+  display: block;
+  padding: 1.75em 0;
 }
 
+/* line 1032, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation span {
-	display: block;
+  display: block;
 }
 
+/* line 1036, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation .meta-nav {
-	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	letter-spacing: 0.076923077em;
-	line-height: 1.6153846154;
-	margin-bottom: 0.5384615385em;
-	text-transform: uppercase;
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.076923077em;
+  line-height: 1.6153846154;
+  margin-bottom: 0.5384615385em;
+  text-transform: uppercase;
 }
 
+/* line 1046, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation .post-title {
-	display: inline;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 23px;
-	font-size: 1.4375rem;
-	font-weight: 700;
-	line-height: 1.2173913043;
-	text-rendering: optimizeLegibility;
+  display: inline;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 23px;
+  font-size: 1.4375rem;
+  font-weight: 700;
+  line-height: 1.2173913043;
+  text-rendering: optimizeLegibility;
 }
 
+/* line 1056, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation a:hover .post-title,
 .post-navigation a:focus .post-title {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 1061, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation div + div {
-	border-top: 4px solid #1a1a1a;
+  border-top: 4px solid #1a1a1a;
 }
 
+/* line 1065, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination {
-	border-top: 4px solid #1a1a1a;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 19px;
-	font-size: 1.1875rem;
-	margin: 0 7.6923% 2.947368421em;
-	min-height: 56px;
-	position: relative;
+  border-top: 4px solid #1a1a1a;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  margin: 0 7.6923% 2.947368421em;
+  min-height: 56px;
+  position: relative;
 }
 
+/* line 1075, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination:before,
 .pagination:after {
-	background-color: #1a1a1a;
-	content: "";
-	height: 52px;
-	position: absolute;
-	top:0;
-	width: 52px;
-	z-index: 0;
+  background-color: #1a1a1a;
+  content: "";
+  height: 52px;
+  position: absolute;
+  top: 0;
+  width: 52px;
+  z-index: 0;
 }
 
+/* line 1086, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination:before {
-	right: 0;
+  right: 0;
 }
 
+/* line 1090, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination:after {
-	right: 54px;
+  right: 54px;
 }
 
+/* line 1094, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination a:hover,
 .pagination a:focus {
-	color: #1a1a1a;
+  color: #1a1a1a;
 }
 
+/* line 1099, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .nav-links {
-	padding-right: 106px;
-	position: relative;
+  padding-right: 106px;
+  position: relative;
 }
 
+/* line 1104, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .nav-links:before,
 .pagination .nav-links:after {
-	color: #fff;
-	font-size: 32px;
-	line-height: 51px;
-	opacity: 0.3;
-	position: absolute;
-	width: 52px;
-	z-index: 1;
+  color: #fff;
+  font-size: 32px;
+  line-height: 51px;
+  opacity: 0.3;
+  position: absolute;
+  width: 52px;
+  z-index: 1;
 }
 
+/* line 1115, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .nav-links:before {
-	content: "\f429";
-	right: -1px;
+  content: "\f429";
+  right: -1px;
 }
 
+/* line 1120, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .nav-links:after {
-	content: "\f430";
-	right: 55px;
+  content: "\f430";
+  right: 55px;
 }
 
 /* reset screen-reader-text */
+/* line 1126, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .current .screen-reader-text {
-	position: static !important;
+  position: static !important;
 }
 
+/* line 1130, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .page-numbers {
-	display: none;
-	letter-spacing: 0.013157895em;
-	line-height: 1;
-	margin: 0 0.7368421053em 0 -0.7368421053em;
-	padding: 0.8157894737em 0.7368421053em 0.3947368421em;
-	text-transform: uppercase;
+  display: none;
+  letter-spacing: 0.013157895em;
+  line-height: 1;
+  margin: 0 0.7368421053em 0 -0.7368421053em;
+  padding: 0.8157894737em 0.7368421053em 0.3947368421em;
+  text-transform: uppercase;
 }
 
+/* line 1139, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .current {
-	display: inline-block;
-	font-weight: 700;
+  display: inline-block;
+  font-weight: 700;
 }
 
+/* line 1144, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .prev,
 .pagination .next {
-	background-color: #1a1a1a;
-	color: #fff;
-	display: inline-block;
-	height: 52px;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	top: 0;
-	width: 52px;
-	z-index: 2;
+  background-color: #1a1a1a;
+  color: #fff;
+  display: inline-block;
+  height: 52px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 52px;
+  z-index: 2;
 }
 
+/* line 1159, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .prev:before,
 .pagination .next:before {
-	font-size: 32px;
-	height: 53px;
-	line-height: 52px;
-	position: relative;
-	width: 53px;
+  font-size: 32px;
+  height: 53px;
+  line-height: 52px;
+  position: relative;
+  width: 53px;
 }
 
+/* line 1168, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .prev:hover,
 .pagination .prev:focus,
 .pagination .next:hover,
 .pagination .next:focus {
-	background-color: #007acc;
-	color: #fff;
+  background-color: #007acc;
+  color: #fff;
 }
 
+/* line 1176, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .prev:focus,
 .pagination .next:focus {
-	outline: 0;
+  outline: 0;
 }
 
+/* line 1181, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .prev {
-	right: 54px;
+  right: 54px;
 }
 
+/* line 1185, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .prev:before {
-	content: "\f430";
-	left: -1px;
-	top: -1px;
+  content: "\f430";
+  left: -1px;
+  top: -1px;
 }
 
+/* line 1191, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .next {
-	right: 0;
+  right: 0;
 }
 
+/* line 1195, src/compass/sass/vendor/_twenty-sixteen.scss */
 .pagination .next:before {
-	content: "\f429";
-	right: -1px;
-	top: -1px;
+  content: "\f429";
+  right: -1px;
+  top: -1px;
 }
 
+/* line 1201, src/compass/sass/vendor/_twenty-sixteen.scss */
 .image-navigation,
 .comment-navigation {
-	border-top: 1px solid #d1d1d1;
-	border-bottom: 1px solid #d1d1d1;
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
-	margin: 0 7.6923% 2.1538461538em;
-	padding: 1.0769230769em 0;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
+  margin: 0 7.6923% 2.1538461538em;
+  padding: 1.0769230769em 0;
 }
 
+/* line 1214, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-navigation {
-	margin-right: 0;
-	margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
 
+/* line 1219, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comments-title + .comment-navigation {
-	border-bottom: 0;
-	margin-bottom: 0;
+  border-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 1224, src/compass/sass/vendor/_twenty-sixteen.scss */
 .image-navigation .nav-previous:not(:empty),
 .image-navigation .nav-next:not(:empty),
 .comment-navigation .nav-previous:not(:empty),
 .comment-navigation .nav-next:not(:empty) {
-	display: inline-block;
+  display: inline-block;
 }
 
+/* line 1231, src/compass/sass/vendor/_twenty-sixteen.scss */
 .image-navigation .nav-previous:not(:empty) + .nav-next:not(:empty):before,
 .comment-navigation .nav-previous:not(:empty) + .nav-next:not(:empty):before {
-	content: "\002f";
-	display: inline-block;
-	opacity: 0.7;
-	padding: 0 0.538461538em;
+  content: "\002f";
+  display: inline-block;
+  opacity: 0.7;
+  padding: 0 0.538461538em;
 }
-
 
 /**
  * 7.0 - Accessibility
  */
-
 /* Text meant only for screen readers */
+/* line 1245, src/compass/sass/vendor/_twenty-sixteen.scss */
 .says,
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	overflow: hidden;
-	position: absolute !important;
-	width: 1px;
-	/* many screen reader and browser combinations announce broken words as they would appear visually */
-	word-wrap: normal !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  /* many screen reader and browser combinations announce broken words as they would appear visually */
+  word-wrap: normal !important;
 }
 
 /* must have higher specificity than alternative color schemes inline styles */
+/* line 1257, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site .skip-link {
-	background-color: #f1f1f1;
-	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
-	color: #21759b;
-	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 14px;
-	font-weight: 700;
-	left: -9999em;
-	outline: none;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	text-transform: none;
-	top: -9999em;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  color: #21759b;
+  display: block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  left: -9999em;
+  outline: none;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  text-transform: none;
+  top: -9999em;
 }
 
+/* line 1273, src/compass/sass/vendor/_twenty-sixteen.scss */
 .logged-in .site .skip-link {
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-	font-family: "Open Sans", sans-serif;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
 }
 
+/* line 1278, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site .skip-link:focus {
-	clip: auto;
-	height: auto;
-	left: 6px;
-	top: 7px;
-	width: auto;
-	z-index: 100000;
+  clip: auto;
+  height: auto;
+  left: 6px;
+  top: 7px;
+  width: auto;
+  z-index: 100000;
 }
-
 
 /**
  * 8.0 - Alignments
  */
-
+/* line 1292, src/compass/sass/vendor/_twenty-sixteen.scss */
 .alignleft {
-	float: left;
-	margin: 0.375em 1.75em 1.75em 0;
+  float: left;
+  margin: 0.375em 1.75em 1.75em 0;
 }
 
+/* line 1297, src/compass/sass/vendor/_twenty-sixteen.scss */
 .alignright {
-	float: right;
-	margin: 0.375em 0 1.75em 1.75em;
+  float: right;
+  margin: 0.375em 0 1.75em 1.75em;
 }
 
+/* line 1302, src/compass/sass/vendor/_twenty-sixteen.scss */
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto 1.75em;
+  clear: both;
+  display: block;
+  margin: 0 auto 1.75em;
 }
 
+/* line 1308, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote.alignleft {
-	margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
+  margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
 }
 
+/* line 1312, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote.alignright {
-	margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
+  margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
 }
 
+/* line 1316, src/compass/sass/vendor/_twenty-sixteen.scss */
 blockquote.aligncenter {
-	margin-bottom: 1.473684211em;
+  margin-bottom: 1.473684211em;
 }
-
 
 /**
  * 9.0 - Clearings
  */
-
+/* line 1325, src/compass/sass/vendor/_twenty-sixteen.scss */
 .clear:before,
 .clear:after,
 blockquote:before,
@@ -1360,10 +1559,11 @@ blockquote:after,
 .textwidget:after,
 .content-bottom-widgets:before,
 .content-bottom-widgets:after {
-	content: "";
-	display: table;
+  content: "";
+  display: table;
 }
 
+/* line 1351, src/compass/sass/vendor/_twenty-sixteen.scss */
 .clear:after,
 blockquote:after,
 .entry-content:after,
@@ -1375,375 +1575,425 @@ blockquote:after,
 .social-links-menu:after,
 .textwidget:after,
 .content-bottom-widgets:after {
-	clear: both;
+  clear: both;
 }
-
 
 /**
  * 10.0 - Widgets
  */
-
+/* line 1370, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget {
-	border-top: 4px solid #1a1a1a;
-	margin-bottom: 3.5em;
-	padding-top: 1.75em;
+  border-top: 4px solid #1a1a1a;
+  margin-bottom: 3.5em;
+  padding-top: 1.75em;
 }
 
+/* line 1376, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget-area > :last-child,
 .widget > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 1381, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget .widget-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	letter-spacing: 0.046875em;
-	line-height: 1.3125;
-	margin: 0 0 1.75em;
-	text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.046875em;
+  line-height: 1.3125;
+  margin: 0 0 1.75em;
+  text-transform: uppercase;
 }
 
+/* line 1391, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget .widget-title:empty {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 1395, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget-title a {
-	color: #1a1a1a;
+  color: #1a1a1a;
 }
 
 /* Calendar widget */
+/* line 1400, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget.widget_calendar table {
-	margin: 0;
+  margin: 0;
 }
 
+/* line 1404, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_calendar td,
 .widget_calendar th {
-	line-height: 2.5625;
-	padding: 0;
-	text-align: center;
+  line-height: 2.5625;
+  padding: 0;
+  text-align: center;
 }
 
+/* line 1411, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_calendar caption {
-	font-weight: 900;
-	margin-bottom: 1.75em;
+  font-weight: 900;
+  margin-bottom: 1.75em;
 }
 
+/* line 1416, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_calendar tbody a {
-	background-color: #007acc;
-	color: #fff;
-	display: block;
-	font-weight: 700;
+  background-color: #007acc;
+  color: #fff;
+  display: block;
+  font-weight: 700;
 }
 
+/* line 1423, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_calendar tbody a:hover,
 .widget_calendar tbody a:focus {
-	background-color: #686868;
-	color: #fff;
+  background-color: #686868;
+  color: #fff;
 }
 
 /* Recent Posts widget */
+/* line 1430, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_recent_entries .post-date {
-	color: #686868;
-	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.615384615;
-	margin-bottom: 0.538461538em;
+  color: #686868;
+  display: block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.615384615;
+  margin-bottom: 0.538461538em;
 }
 
+/* line 1440, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_recent_entries li:last-child .post-date {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* RSS widget */
+/* line 1445, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_rss .rsswidget img {
-	margin-top: -0.375em;
+  margin-top: -0.375em;
 }
 
+/* line 1449, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_rss .rss-date,
 .widget_rss cite {
-	color: #686868;
-	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-style: normal;
-	line-height: 1.615384615;
-	margin-bottom: 0.538461538em;
+  color: #686868;
+  display: block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: normal;
+  line-height: 1.615384615;
+  margin-bottom: 0.538461538em;
 }
 
+/* line 1461, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_rss .rssSummary:last-child {
-	margin-bottom: 2.1538461538em;
+  margin-bottom: 2.1538461538em;
 }
 
+/* line 1465, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widget_rss li:last-child :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Tag Cloud widget */
+/* line 1470, src/compass/sass/vendor/_twenty-sixteen.scss */
 .tagcloud a {
-	border: 1px solid #d1d1d1;
-	border-radius: 2px;
-	display: inline-block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	line-height: 1;
-	margin: 0 0.1875em 0.4375em 0;
-	padding: 0.5625em 0.4375em 0.5em;
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  display: inline-block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  line-height: 1;
+  margin: 0 0.1875em 0.4375em 0;
+  padding: 0.5625em 0.4375em 0.5em;
 }
 
+/* line 1480, src/compass/sass/vendor/_twenty-sixteen.scss */
 .tagcloud a:hover,
 .tagcloud a:focus {
-	border-color: #007acc;
-	color: #007acc;
-	outline: 0;
+  border-color: #007acc;
+  color: #007acc;
+  outline: 0;
 }
-
 
 /**
  * 11.0 - Content
  */
-
+/* line 1492, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site {
-	background-color: #fff;
+  background-color: #fff;
 }
 
+/* line 1496, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-inner {
-	margin: 0 auto;
-	max-width: 1320px;
-	position: relative;
+  margin: 0 auto;
+  max-width: 1320px;
+  position: relative;
 }
 
+/* line 1502, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-content {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Do not show the outline on the skip link target. */
+/* line 1507, src/compass/sass/vendor/_twenty-sixteen.scss */
 #content[tabindex="-1"]:focus {
-	outline: 0;
+  outline: 0;
 }
 
+/* line 1511, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-main {
-	margin-bottom: 3.5em;
+  margin-bottom: 3.5em;
 }
 
+/* line 1515, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-main > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
-
 
 /**
  * 11.1 - Header
  */
-
+/* line 1524, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-header {
-	padding: 2.625em 7.6923%;
+  padding: 2.625em 7.6923%;
 }
 
+/* line 1528, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-header-main {
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
+/* line 1540, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-branding {
-	margin: 0.875em auto 0.875em 0;
-	/* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
-	max-width: 100%;
-	min-width: 0;
-	overflow: hidden;
+  margin: 0.875em auto 0.875em 0;
+  /* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
+/* line 1548, src/compass/sass/vendor/_twenty-sixteen.scss */
 .custom-logo-link {
-	display: block;
+  display: block;
 }
 
+/* line 1552, src/compass/sass/vendor/_twenty-sixteen.scss */
 .custom-logo {
-	max-width: 180px;
+  max-width: 180px;
 }
 
+/* line 1556, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 23px;
-	font-size: 1.4375rem;
-	font-weight: 700;
-	line-height: 1.2173913043;
-	margin: 0;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 23px;
+  font-size: 1.4375rem;
+  font-weight: 700;
+  line-height: 1.2173913043;
+  margin: 0;
 }
 
+/* line 1565, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-branding .site-title a {
-	color: #1a1a1a;
+  color: #1a1a1a;
 }
 
+/* line 1569, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-branding .site-title a:hover,
 .site-branding .site-title a:focus {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 1574, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-custom-logo .site-title {
-	margin-top: 0.608695652em;
+  margin-top: 0.608695652em;
 }
 
+/* line 1578, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-description {
-	color: #686868;
-	display: none;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: 400;
-	line-height: 1.0769230769;
-	margin: 0.538461538em 0 0;
+  color: #686868;
+  display: none;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.0769230769;
+  margin: 0.538461538em 0 0;
 }
 
+/* line 1588, src/compass/sass/vendor/_twenty-sixteen.scss */
 .menu-toggle {
-	background-color: transparent;
-	border: 1px solid #d1d1d1;
-	color: #1a1a1a;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	margin: 1.076923077em 0;
-	padding: 0.769230769em;
+  background-color: transparent;
+  border: 1px solid #d1d1d1;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  margin: 1.076923077em 0;
+  padding: 0.769230769em;
 }
 
+/* line 1598, src/compass/sass/vendor/_twenty-sixteen.scss */
 .no-js .menu-toggle {
-	display: none;
+  display: none;
 }
 
+/* line 1602, src/compass/sass/vendor/_twenty-sixteen.scss */
 .menu-toggle:hover,
 .menu-toggle:focus {
-	background-color: transparent;
-	border-color: #007acc;
-	color: #007acc;
+  background-color: transparent;
+  border-color: #007acc;
+  color: #007acc;
 }
 
+/* line 1609, src/compass/sass/vendor/_twenty-sixteen.scss */
 .menu-toggle.toggled-on,
 .menu-toggle.toggled-on:hover,
 .menu-toggle.toggled-on:focus {
-	background-color: #1a1a1a;
-	border-color: #1a1a1a;
-	color: #fff;
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #fff;
 }
 
+/* line 1617, src/compass/sass/vendor/_twenty-sixteen.scss */
 .menu-toggle:focus {
-	outline: 0;
+  outline: 0;
 }
 
+/* line 1621, src/compass/sass/vendor/_twenty-sixteen.scss */
 .menu-toggle.toggled-on:focus {
-	outline: thin dotted;
+  outline: thin dotted;
 }
 
+/* line 1625, src/compass/sass/vendor/_twenty-sixteen.scss */
 .header-image {
-	clear: both;
-	margin: 0.875em 0;
+  clear: both;
+  margin: 0.875em 0;
 }
 
+/* line 1630, src/compass/sass/vendor/_twenty-sixteen.scss */
 .header-image a {
-	display: block;
+  display: block;
 }
 
+/* line 1634, src/compass/sass/vendor/_twenty-sixteen.scss */
 .header-image a:hover img,
 .header-image a:focus img {
-	opacity: 0.85;
+  opacity: 0.85;
 }
 
 /**
  * 11.2 - Posts and pages
  */
-
+/* line 1643, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-main > article {
-	margin-bottom: 3.5em;
-	position: relative;
+  margin-bottom: 3.5em;
+  position: relative;
 }
 
+/* line 1648, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-header,
 .entry-summary,
 .entry-content,
 .entry-footer,
 .page-content {
-	margin-right: 7.6923%;
-	margin-left: 7.6923%;
+  margin-right: 7.6923%;
+  margin-left: 7.6923%;
 }
 
+/* line 1657, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 28px;
-	font-size: 1.75rem;
-	font-weight: 700;
-	line-height: 1.25;
-	margin-bottom: 1em;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1em;
 }
 
+/* line 1666, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-title a {
-	color: #1a1a1a;
+  color: #1a1a1a;
 }
 
+/* line 1670, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-title a:hover,
 .entry-title a:focus {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 1675, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-thumbnail {
-	display: block;
-	margin: 0 7.6923% 1.75em;
+  display: block;
+  margin: 0 7.6923% 1.75em;
 }
 
+/* line 1680, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-thumbnail img {
-	display: block;
+  display: block;
 }
 
+/* line 1684, src/compass/sass/vendor/_twenty-sixteen.scss */
 .no-sidebar .post-thumbnail img {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
+/* line 1688, src/compass/sass/vendor/_twenty-sixteen.scss */
 a.post-thumbnail:hover,
 a.post-thumbnail:focus {
-	opacity: 0.85;
+  opacity: 0.85;
 }
 
+/* line 1693, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content,
 .entry-summary {
-	border-color: #d1d1d1;
+  border-color: #d1d1d1;
 }
 
+/* line 1698, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h1,
 .entry-summary h1,
 .comment-content h1,
 .textwidget h1 {
-	font-size: 28px;
-	font-size: 1.75rem;
-	line-height: 1.25;
-	margin-top: 2em;
-	margin-bottom: 1em;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
+/* line 1709, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h2,
 .entry-summary h2,
 .comment-content h2,
 .textwidget h2 {
-	font-size: 23px;
-	font-size: 1.4375rem;
-	line-height: 1.2173913043;
-	margin-top: 2.4347826087em;
-	margin-bottom: 1.2173913043em;
+  font-size: 23px;
+  font-size: 1.4375rem;
+  line-height: 1.2173913043;
+  margin-top: 2.4347826087em;
+  margin-bottom: 1.2173913043em;
 }
 
+/* line 1720, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h3,
 .entry-summary h3,
 .comment-content h3,
 .textwidget h3 {
-	font-size: 19px;
-	font-size: 1.1875rem;
-	line-height: 1.1052631579;
-	margin-top: 2.9473684211em;
-	margin-bottom: 1.4736842105em;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.1052631579;
+  margin-top: 2.9473684211em;
+  margin-bottom: 1.4736842105em;
 }
 
+/* line 1731, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h4,
 .entry-content h5,
 .entry-content h6,
@@ -1756,28 +2006,31 @@ a.post-thumbnail:focus {
 .textwidget h4,
 .textwidget h5,
 .textwidget h6 {
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.3125;
-	margin-top: 3.5em;
-	margin-bottom: 1.75em;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.3125;
+  margin-top: 3.5em;
+  margin-bottom: 1.75em;
 }
 
+/* line 1750, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h4,
 .entry-summary h4,
 .comment-content h4,
 .textwidget h4 {
-	letter-spacing: 0.140625em;
-	text-transform: uppercase;
+  letter-spacing: 0.140625em;
+  text-transform: uppercase;
 }
 
+/* line 1758, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h6,
 .entry-summary h6,
 .comment-content h6,
 .textwidget h6 {
-	font-style: italic;
+  font-style: italic;
 }
 
+/* line 1765, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
@@ -1802,9 +2055,10 @@ a.post-thumbnail:focus {
 .textwidget h4,
 .textwidget h5,
 .textwidget h6 {
-	font-weight: 900;
+  font-weight: 900;
 }
 
+/* line 1792, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content h1:first-child,
 .entry-content h2:first-child,
 .entry-content h3:first-child,
@@ -1829,30 +2083,34 @@ a.post-thumbnail:focus {
 .textwidget h4:first-child,
 .textwidget h5:first-child,
 .textwidget h6:first-child {
-	margin-top: 0;
+  margin-top: 0;
 }
 
+/* line 1819, src/compass/sass/vendor/_twenty-sixteen.scss */
 .post-navigation .post-title,
 .entry-title,
 .comments-title {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
+/* line 1828, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary {
-	color: #686868;
-	font-size: 19px;
-	font-size: 1.1875rem;
-	line-height: 1.4736842105;
-	margin-bottom: 1.4736842105em;
+  color: #686868;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.4736842105;
+  margin-bottom: 1.4736842105em;
 }
 
+/* line 1836, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-header + .entry-summary {
-	margin-top: -0.736842105em;
+  margin-top: -0.736842105em;
 }
 
+/* line 1840, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary p,
 body:not(.search-results) .entry-summary address,
 body:not(.search-results) .entry-summary hr,
@@ -1861,270 +2119,311 @@ body:not(.search-results) .entry-summary ol,
 body:not(.search-results) .entry-summary dl,
 body:not(.search-results) .entry-summary dd,
 body:not(.search-results) .entry-summary table {
-	margin-bottom: 1.4736842105em;
+  margin-bottom: 1.4736842105em;
 }
 
+/* line 1851, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary li > ul,
 body:not(.search-results) .entry-summary li > ol {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 1856, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary th,
 body:not(.search-results) .entry-summary td {
-	padding: 0.3684210526em;
+  padding: 0.3684210526em;
 }
 
+/* line 1861, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary fieldset {
-	margin-bottom: 1.4736842105em;
-	padding: 0.3684210526em;
+  margin-bottom: 1.4736842105em;
+  padding: 0.3684210526em;
 }
 
+/* line 1866, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary blockquote {
-	border-color: currentColor;
+  border-color: currentColor;
 }
 
+/* line 1870, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary blockquote > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 1874, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary .alignleft {
-	margin: 0.2631578947em 1.4736842105em 1.4736842105em 0;
+  margin: 0.2631578947em 1.4736842105em 1.4736842105em 0;
 }
 
+/* line 1878, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary .alignright {
-	margin: 0.2631578947em 0 1.4736842105em 1.4736842105em;
+  margin: 0.2631578947em 0 1.4736842105em 1.4736842105em;
 }
 
+/* line 1882, src/compass/sass/vendor/_twenty-sixteen.scss */
 body:not(.search-results) .entry-summary .aligncenter {
-	margin-bottom: 1.4736842105em;
+  margin-bottom: 1.4736842105em;
 }
 
+/* line 1886, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content > :last-child,
 .entry-summary > :last-child,
 body:not(.search-results) .entry-summary > :last-child,
 .page-content > :last-child,
 .comment-content > :last-child,
 .textwidget > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 1895, src/compass/sass/vendor/_twenty-sixteen.scss */
 .more-link {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
+/* line 1899, src/compass/sass/vendor/_twenty-sixteen.scss */
 .author-info {
-	border-color: inherit;
-	border-style: solid;
-	border-width: 1px 0 1px 0;
-	clear: both;
-	padding-top: 1.75em;
-	padding-bottom: 1.75em;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  clear: both;
+  padding-top: 1.75em;
+  padding-bottom: 1.75em;
 }
 
+/* line 1908, src/compass/sass/vendor/_twenty-sixteen.scss */
 .author-avatar .avatar {
-	float: left;
-	height: 42px;
-	margin: 0 1.75em 1.75em 0;
-	width: 42px;
+  float: left;
+  height: 42px;
+  margin: 0 1.75em 1.75em 0;
+  width: 42px;
 }
 
+/* line 1915, src/compass/sass/vendor/_twenty-sixteen.scss */
 .author-description > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 1919, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content .author-title {
-	clear: none;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 900;
-	line-height: 1.75;
-	margin: 0;
+  clear: none;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.75;
+  margin: 0;
 }
 
+/* line 1928, src/compass/sass/vendor/_twenty-sixteen.scss */
 .author-bio {
-	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
-	margin-bottom: 1.6153846154em;
-	overflow: hidden;
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
+  margin-bottom: 1.6153846154em;
+  overflow: hidden;
 }
 
+/* line 1937, src/compass/sass/vendor/_twenty-sixteen.scss */
 .author-link {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
+/* line 1941, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-footer {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
-	margin-top: 2.1538461538em;
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
+  margin-top: 2.1538461538em;
 }
 
+/* line 1950, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-footer:empty {
-	margin: 0;
+  margin: 0;
 }
 
+/* line 1954, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-footer a {
-	color: #686868;
+  color: #686868;
 }
 
+/* line 1958, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-footer a:hover,
 .entry-footer a:focus {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 1963, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-footer > span:not(:last-child):after {
-	content: "\002f";
-	display: inline-block;
-	opacity: 0.7;
-	padding: 0 0.538461538em;
+  content: "\002f";
+  display: inline-block;
+  opacity: 0.7;
+  padding: 0 0.538461538em;
 }
 
+/* line 1970, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-footer .avatar {
-	height: 21px;
-	margin: -0.1538461538em 0.5384615385em 0 0;
-	width: 21px;
+  height: 21px;
+  margin: -0.1538461538em 0.5384615385em 0 0;
+  width: 21px;
 }
 
+/* line 1976, src/compass/sass/vendor/_twenty-sixteen.scss */
 .sticky-post {
-	color: #686868;
-	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	letter-spacing: 0.076923077em;
-	line-height: 1.6153846154;
-	margin-bottom: 0.5384615385em;
-	text-transform: uppercase;
+  color: #686868;
+  display: block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.076923077em;
+  line-height: 1.6153846154;
+  margin-bottom: 0.5384615385em;
+  text-transform: uppercase;
 }
 
 /**
  * IE8 and earlier will drop any block with CSS3 selectors.
  * Do not combine these styles with the next block.
  */
+/* line 1992, src/compass/sass/vendor/_twenty-sixteen.scss */
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
+/* line 1996, src/compass/sass/vendor/_twenty-sixteen.scss */
 .sticky .posted-on,
 .byline {
-	display: none;
+  display: none;
 }
 
+/* line 2001, src/compass/sass/vendor/_twenty-sixteen.scss */
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
 
+/* line 2006, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-header {
-	border-top: 4px solid #1a1a1a;
-	margin: 0 7.6923% 3.5em;
-	padding-top: 1.75em;
+  border-top: 4px solid #1a1a1a;
+  margin: 0 7.6923% 3.5em;
+  padding-top: 1.75em;
 }
 
+/* line 2012, src/compass/sass/vendor/_twenty-sixteen.scss */
 body.error404 .page-header,
 body.search-no-results .page-header {
-	border-top: 0;
-	padding-top: 0;
+  border-top: 0;
+  padding-top: 0;
 }
 
+/* line 2018, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 23px;
-	font-size: 1.4375rem;
-	line-height: 1.2173913043;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 23px;
+  font-size: 1.4375rem;
+  line-height: 1.2173913043;
 }
 
+/* line 2025, src/compass/sass/vendor/_twenty-sixteen.scss */
 .taxonomy-description {
-	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
 }
 
+/* line 2032, src/compass/sass/vendor/_twenty-sixteen.scss */
 .taxonomy-description p {
-	margin: 0.5384615385em 0 1.6153846154em;
+  margin: 0.5384615385em 0 1.6153846154em;
 }
 
+/* line 2036, src/compass/sass/vendor/_twenty-sixteen.scss */
 .taxonomy-description > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 2040, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-links {
-	clear: both;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	margin: 0 0 1.75em;
+  clear: both;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  margin: 0 0 1.75em;
 }
 
+/* line 2046, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-links a,
 .page-links > span {
-	border: 1px solid #d1d1d1;
-	border-radius: 2px;
-	display: inline-block;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	height: 1.8461538462em;
-	line-height: 1.6923076923em;
-	margin-right: 0.3076923077em;
-	text-align: center;
-	width: 1.8461538462em;
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  height: 1.8461538462em;
+  line-height: 1.6923076923em;
+  margin-right: 0.3076923077em;
+  text-align: center;
+  width: 1.8461538462em;
 }
 
+/* line 2060, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-links a {
-	background-color: #1a1a1a;
-	border-color: #1a1a1a;
-	color: #fff;
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #fff;
 }
 
+/* line 2066, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-links a:hover,
 .page-links a:focus {
-	background-color: #007acc;
-	border-color: transparent;
-	color: #fff;
+  background-color: #007acc;
+  border-color: transparent;
+  color: #fff;
 }
 
+/* line 2073, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-links > .page-links-title {
-	border: 0;
-	color: #1a1a1a;
-	height: auto;
-	margin: 0;
-	padding-right: 0.6153846154em;
-	width: auto;
+  border: 0;
+  color: #1a1a1a;
+  height: auto;
+  margin: 0;
+  padding-right: 0.6153846154em;
+  width: auto;
 }
 
+/* line 2082, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-attachment {
-	margin-bottom: 1.75em;
+  margin-bottom: 1.75em;
 }
 
+/* line 2086, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-caption {
-	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-style: italic;
-	line-height: 1.6153846154;
-	padding-top: 1.0769230769em;
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: italic;
+  line-height: 1.6153846154;
+  padding-top: 1.0769230769em;
 }
 
+/* line 2095, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-caption > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 2099, src/compass/sass/vendor/_twenty-sixteen.scss */
 .content-bottom-widgets {
-	margin: 0 7.6923%;
+  margin: 0 7.6923%;
 }
 
+/* line 2103, src/compass/sass/vendor/_twenty-sixteen.scss */
 .content-bottom-widgets .widget-area {
-	margin-bottom: 3.5em;
+  margin-bottom: 3.5em;
 }
-
 
 /**
  * 11.3 - Post Formats
  */
-
+/* line 2112, src/compass/sass/vendor/_twenty-sixteen.scss */
 .format-aside .entry-title,
 .format-image .entry-title,
 .format-video .entry-title,
@@ -2134,558 +2433,627 @@ body.search-no-results .page-header {
 .format-link .entry-title,
 .format-audio .entry-title,
 .format-chat .entry-title {
-	font-size: 19px;
-	font-size: 1.1875rem;
-	line-height: 1.473684211;
-	margin-bottom: 1.473684211em;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.473684211;
+  margin-bottom: 1.473684211em;
 }
 
+/* line 2127, src/compass/sass/vendor/_twenty-sixteen.scss */
 .blog .format-status .entry-title,
 .archive .format-status .entry-title {
-	display: none;
+  display: none;
 }
-
 
 /**
  * 11.4 - Comments
  */
-
+/* line 2137, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comments-area {
-	margin: 0 7.6923% 3.5em;
+  margin: 0 7.6923% 3.5em;
 }
 
+/* line 2141, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-list + .comment-respond,
 .comment-navigation + .comment-respond {
-	padding-top: 1.75em;
+  padding-top: 1.75em;
 }
 
+/* line 2146, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comments-title,
 .comment-reply-title {
-	border-top: 4px solid #1a1a1a;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 23px;
-	font-size: 1.4375rem;
-	font-weight: 700;
-	line-height: 1.3125;
-	padding-top: 1.217391304em;
+  border-top: 4px solid #1a1a1a;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 23px;
+  font-size: 1.4375rem;
+  font-weight: 700;
+  line-height: 1.3125;
+  padding-top: 1.217391304em;
 }
 
+/* line 2157, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comments-title {
-	margin-bottom: 1.217391304em;
+  margin-bottom: 1.217391304em;
 }
 
+/* line 2161, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-list {
-	list-style: none;
-	margin: 0;
+  list-style: none;
+  margin: 0;
 }
 
+/* line 2166, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-list article,
 .comment-list .pingback,
 .comment-list .trackback {
-	border-top: 1px solid #d1d1d1;
-	padding: 1.75em 0;
+  border-top: 1px solid #d1d1d1;
+  padding: 1.75em 0;
 }
 
+/* line 2173, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-list .children {
-	list-style: none;
-	margin: 0;
+  list-style: none;
+  margin: 0;
 }
 
+/* line 2178, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-list .children > li {
-	padding-left: 0.875em;
+  padding-left: 0.875em;
 }
 
+/* line 2182, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-author {
-	color: #1a1a1a;
-	margin-bottom: 0.4375em;
+  color: #1a1a1a;
+  margin-bottom: 0.4375em;
 }
 
+/* line 2187, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-author .avatar {
-	float: left;
-	height: 28px;
-	margin-right: 0.875em;
-	position: relative;
-	width: 28px;
+  float: left;
+  height: 28px;
+  margin-right: 0.875em;
+  position: relative;
+  width: 28px;
 }
 
+/* line 2195, src/compass/sass/vendor/_twenty-sixteen.scss */
 .bypostauthor > article .fn:after {
-	content: "\f304";
-	left: 3px;
-	position: relative;
-	top: 5px;
+  content: "\f304";
+  left: 3px;
+  position: relative;
+  top: 5px;
 }
 
+/* line 2202, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-metadata,
 .pingback .edit-link {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
 }
 
+/* line 2211, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-metadata {
-	margin-bottom: 2.1538461538em;
+  margin-bottom: 2.1538461538em;
 }
 
+/* line 2215, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-metadata a,
 .pingback .comment-edit-link {
-	color: #686868;
+  color: #686868;
 }
 
+/* line 2220, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-metadata a:hover,
 .comment-metadata a:focus,
 .pingback .comment-edit-link:hover,
 .pingback .comment-edit-link:focus {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 2227, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-metadata .edit-link,
 .pingback .edit-link {
-	display: inline-block;
+  display: inline-block;
 }
 
+/* line 2232, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-metadata .edit-link:before,
 .pingback .edit-link:before {
-	content: "\002f";
-	display: inline-block;
-	opacity: 0.7;
-	padding: 0 0.538461538em;
+  content: "\002f";
+  display: inline-block;
+  opacity: 0.7;
+  padding: 0 0.538461538em;
 }
 
+/* line 2240, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-content ul,
 .comment-content ol {
-	margin: 0 0 1.5em 1.25em;
+  margin: 0 0 1.5em 1.25em;
 }
 
+/* line 2245, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-content li > ul,
 .comment-content li > ol {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 2250, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-reply-link {
-	border: 1px solid #d1d1d1;
-	border-radius: 2px;
-	color: #007acc;
-	display: inline-block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1;
-	margin-top: 2.1538461538em;
-	padding: 0.5384615385em 0.5384615385em 0.4615384615em;
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  color: #007acc;
+  display: inline-block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1;
+  margin-top: 2.1538461538em;
+  padding: 0.5384615385em 0.5384615385em 0.4615384615em;
 }
 
+/* line 2263, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-reply-link:hover,
 .comment-reply-link:focus {
-	border-color: currentColor;
-	color: #007acc;
-	outline: 0;
+  border-color: currentColor;
+  color: #007acc;
+  outline: 0;
 }
 
+/* line 2270, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-form {
-	padding-top: 1.75em;
+  padding-top: 1.75em;
 }
 
+/* line 2274, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-form label {
-	color: #686868;
-	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	letter-spacing: 0.076923077em;
-	line-height: 1.6153846154;
-	margin-bottom: 0.5384615385em;
-	text-transform: uppercase;
+  color: #686868;
+  display: block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.076923077em;
+  line-height: 1.6153846154;
+  margin-bottom: 0.5384615385em;
+  text-transform: uppercase;
 }
 
+/* line 2286, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-list .comment-form {
-	padding-bottom: 1.75em;
+  padding-bottom: 1.75em;
 }
 
+/* line 2290, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-notes,
 .comment-awaiting-moderation,
 .logged-in-as,
 .form-allowed-tags {
-	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
-	margin-bottom: 2.1538461538em;
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
+  margin-bottom: 2.1538461538em;
 }
 
+/* line 2301, src/compass/sass/vendor/_twenty-sixteen.scss */
 .no-comments {
-	border-top: 1px solid #d1d1d1;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-weight: 700;
-	margin: 0;
-	padding-top: 1.75em;
+  border-top: 1px solid #d1d1d1;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 1.75em;
 }
 
+/* line 2309, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-navigation + .no-comments {
-	border-top: 0;
-	padding-top: 0;
+  border-top: 0;
+  padding-top: 0;
 }
 
+/* line 2314, src/compass/sass/vendor/_twenty-sixteen.scss */
 .form-allowed-tags code {
-	font-family: Inconsolata, monospace;
+  font-family: Inconsolata, monospace;
 }
 
+/* line 2318, src/compass/sass/vendor/_twenty-sixteen.scss */
 .form-submit {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 2322, src/compass/sass/vendor/_twenty-sixteen.scss */
 .required {
-	color: #007acc;
-	font-family: Merriweather, Georgia, serif;
+  color: #007acc;
+  font-family: Merriweather, Georgia, serif;
 }
 
+/* line 2327, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-reply-title small {
-	font-size: 100%;
+  font-size: 100%;
 }
 
+/* line 2331, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-reply-title small a {
-	border: 0;
-	float: right;
-	height: 32px;
-	overflow: hidden;
-	width: 26px;
+  border: 0;
+  float: right;
+  height: 32px;
+  overflow: hidden;
+  width: 26px;
 }
 
+/* line 2339, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-reply-title small a:hover,
 .comment-reply-title small a:focus {
-	color: #1a1a1a;
+  color: #1a1a1a;
 }
 
+/* line 2344, src/compass/sass/vendor/_twenty-sixteen.scss */
 .comment-reply-title small a:before {
-	content: "\f405";
-	font-size: 32px;
-	position: relative;
-	top: -5px;
+  content: "\f405";
+  font-size: 32px;
+  position: relative;
+  top: -5px;
 }
-
 
 /**
  * 11.5 - Sidebar
  */
-
+/* line 2356, src/compass/sass/vendor/_twenty-sixteen.scss */
 .sidebar {
-	margin-bottom: 3.5em;
-	padding: 0 7.6923%;
+  margin-bottom: 3.5em;
+  padding: 0 7.6923%;
 }
-
 
 /**
  * 11.6 - Footer
  */
-
+/* line 2366, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-footer {
-	padding: 0 7.6923% 1.75em;
+  padding: 0 7.6923% 1.75em;
 }
 
+/* line 2370, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-info {
-	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.6153846154;
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
 }
 
+/* line 2377, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-info a {
-	color: #686868;
+  color: #686868;
 }
 
+/* line 2381, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-info a:hover,
 .site-info a:focus {
-	color: #007acc;
+  color: #007acc;
 }
 
+/* line 2386, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-footer .site-title {
-	font-family: inherit;
-	font-size: inherit;
-	font-weight: 400;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
 }
 
+/* line 2392, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site-footer .site-title:after {
-	content: "\002f";
-	display: inline-block;
-	font-family: Montserrat, sans-serif;
-	opacity: 0.7;
-	padding: 0 0.307692308em 0 0.538461538em;
+  content: "\002f";
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+  opacity: 0.7;
+  padding: 0 0.307692308em 0 0.538461538em;
 }
-
 
 /**
  * 12.0 - Media
  */
-
+/* line 2405, src/compass/sass/vendor/_twenty-sixteen.scss */
 .site .avatar {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
+/* line 2409, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content .wp-smiley,
 .entry-summary .wp-smiley,
 .comment-content .wp-smiley,
 .textwidget .wp-smiley {
-	border: none;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0;
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
+/* line 2419, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content a img,
 .entry-summary a img,
 .comment-content a img,
 .textwidget a img {
-	display: block;
+  display: block;
 }
 
 /* Make sure embeds and iframes fit their containers. */
+/* line 2427, src/compass/sass/vendor/_twenty-sixteen.scss */
 embed,
 iframe,
 object,
 video {
-	margin-bottom: 1.75em;
-	max-width: 100%;
-	vertical-align: middle;
+  margin-bottom: 1.75em;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
+/* line 2436, src/compass/sass/vendor/_twenty-sixteen.scss */
 p > embed,
 p > iframe,
 p > object,
 p > video {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* line 2443, src/compass/sass/vendor/_twenty-sixteen.scss */
 .entry-content .wp-audio-shortcode a,
 .entry-content .wp-playlist a {
-	box-shadow: none;
+  box-shadow: none;
 }
 
+/* line 2448, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-audio-shortcode,
 .wp-video,
 .wp-playlist.wp-audio-playlist {
-	margin-top: 0;
-	margin-bottom: 1.75em;
+  margin-top: 0;
+  margin-bottom: 1.75em;
 }
 
+/* line 2455, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-playlist.wp-audio-playlist {
-	padding-bottom: 0;
+  padding-bottom: 0;
 }
 
+/* line 2459, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-playlist .wp-playlist-tracks {
-	margin-top: 0;
+  margin-top: 0;
 }
 
+/* line 2463, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-playlist-item .wp-playlist-caption {
-	border-bottom: 0;
-	padding: 0.7142857143em 0;
+  border-bottom: 0;
+  padding: 0.7142857143em 0;
 }
 
+/* line 2468, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-playlist-item .wp-playlist-item-length {
-	top: 0.7142857143em;
+  top: 0.7142857143em;
 }
-
 
 /**
  * 12.1 - Captions
  */
-
+/* line 2477, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-caption {
-	margin-bottom: 1.75em;
-	max-width: 100%;
+  margin-bottom: 1.75em;
+  max-width: 100%;
 }
 
+/* line 2482, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 0;
+  display: block;
+  margin: 0;
 }
 
+/* line 2487, src/compass/sass/vendor/_twenty-sixteen.scss */
 .wp-caption .wp-caption-text {
-	color: #686868;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-style: italic;
-	line-height: 1.6153846154;
-	padding-top: 0.5384615385em;
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: italic;
+  line-height: 1.6153846154;
+  padding-top: 0.5384615385em;
 }
-
 
 /**
  * 12.2 - Galleries
  */
-
+/* line 2501, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery {
-	margin: 0 -1.1666667% 1.75em;
+  margin: 0 -1.1666667% 1.75em;
 }
 
+/* line 2505, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-item {
-	display: inline-block;
-	max-width: 33.33%;
-	padding: 0 1.1400652% 2.2801304%;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+  display: inline-block;
+  max-width: 33.33%;
+  padding: 0 1.1400652% 2.2801304%;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
 }
 
+/* line 2514, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-1 .gallery-item {
-	max-width: 100%;
+  max-width: 100%;
 }
 
+/* line 2518, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+  max-width: 50%;
 }
 
+/* line 2522, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+  max-width: 25%;
 }
 
+/* line 2526, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+  max-width: 20%;
 }
 
+/* line 2530, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+  max-width: 16.66%;
 }
 
+/* line 2534, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+  max-width: 14.28%;
 }
 
+/* line 2538, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+  max-width: 12.5%;
 }
 
+/* line 2542, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+  max-width: 11.11%;
 }
 
+/* line 2546, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-icon img {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
+/* line 2550, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-caption {
-	color: #686868;
-	display: block;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-style: italic;
-	line-height: 1.6153846154;
-	padding-top: 0.5384615385em;
+  color: #686868;
+  display: block;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: italic;
+  line-height: 1.6153846154;
+  padding-top: 0.5384615385em;
 }
 
+/* line 2560, src/compass/sass/vendor/_twenty-sixteen.scss */
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
-	display: none;
+  display: none;
 }
-
 
 /**
  * 13.0 - Multisites
  */
-
+/* line 2572, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn {
-	margin-bottom: 3.5em;
-	padding: 0 7.6923%;
+  margin-bottom: 3.5em;
+  padding: 0 7.6923%;
 }
 
+/* line 2577, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register {
-	width: auto;
+  width: auto;
 }
 
+/* line 2581, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register .mu_alert {
-	background: transparent;
-	border-color: #d1d1d1;
-	color: inherit;
-	margin-bottom: 3.5em;
-	padding: 1.75em;
+  background: transparent;
+  border-color: #d1d1d1;
+  color: inherit;
+  margin-bottom: 3.5em;
+  padding: 1.75em;
 }
 
+/* line 2589, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn form,
 .widecolumn .mu_register form {
-	margin-top: 0;
+  margin-top: 0;
 }
 
+/* line 2594, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn h2 {
-	font-size: 23px;
-	font-size: 1.4375rem;
-	font-weight: 900;
-	line-height: 1.2173913043;
-	margin-bottom: 1.2173913043em;
+  font-size: 23px;
+  font-size: 1.4375rem;
+  font-weight: 900;
+  line-height: 1.2173913043;
+  margin-bottom: 1.2173913043em;
 }
 
+/* line 2602, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn p {
-	margin: 1.75em 0;
+  margin: 1.75em 0;
 }
 
+/* line 2606, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn p + h2 {
-	margin-top: 2.4347826087em;
+  margin-top: 2.4347826087em;
 }
 
+/* line 2610, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn label,
 .widecolumn .mu_register label {
-	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: 400;
-	letter-spacing: 0.076923077em;
-	line-height: 1.6153846154;
-	text-transform: uppercase;
+  color: #686868;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.076923077em;
+  line-height: 1.6153846154;
+  text-transform: uppercase;
 }
 
+/* line 2622, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register label {
-	margin: 2.1538461538em 0.7692307692em 0.5384615385em 0;
+  margin: 2.1538461538em 0.7692307692em 0.5384615385em 0;
 }
 
+/* line 2626, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register label strong {
-	font-weight: 400;
+  font-weight: 400;
 }
 
+/* line 2630, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn #key,
 .widecolumn .mu_register #blog_title,
 .widecolumn .mu_register #user_email,
 .widecolumn .mu_register #blogname,
 .widecolumn .mu_register #user_name {
-	font-size: 16px;
-	font-size: 1rem;
-	width: 100%;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 100%;
 }
 
+/* line 2640, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register #blogname {
-	margin: 0;
+  margin: 0;
 }
 
+/* line 2644, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register #blog_title,
 .widecolumn .mu_register #user_email,
 .widecolumn .mu_register #user_name {
-	margin: 0 0 0.375em;
+  margin: 0 0 0.375em;
 }
 
+/* line 2650, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn #submit,
 .widecolumn .mu_register input[type="submit"] {
-	font-size: 16px;
-	font-size: 1rem;
-	margin: 0;
-	width: auto;
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0;
+  width: auto;
 }
 
+/* line 2658, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register .prefix_address,
 .widecolumn .mu_register .suffix_address {
-	font-size: inherit;
+  font-size: inherit;
 }
 
+/* line 2663, src/compass/sass/vendor/_twenty-sixteen.scss */
 .widecolumn .mu_register > :last-child,
 .widecolumn form > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
-
 
 /**
  * 14.0 - Media Queries
  */
-
 /**
  * Does the same thing as <meta name="viewport" content="width=device-width">,
  * but in the future W3C standard way. -ms- prefix is required for IE10+ to
@@ -2693,1261 +3061,2020 @@ p > video {
  * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
  */
 @-ms-viewport {
-	width: device-width;
+  width: device-width;
 }
-
 @viewport {
-	width: device-width;
+  width: device-width;
 }
-
-
 /**
  * 14.1 - >= 710px
  */
-
 @media screen and (min-width: 44.375em) {
-	body:not(.custom-background-image):before,
-	body:not(.custom-background-image):after {
-		background: inherit;
-		content: "";
-		display: block;
-		height: 21px;
-		left: 0;
-		position: fixed;
-		width: 100%;
-		z-index: 99;
-	}
+  /* line 2693, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.custom-background-image):before,
+  body:not(.custom-background-image):after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 21px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+  }
 
-	body:not(.custom-background-image):before {
-		top: 0;
-	}
+  /* line 2705, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.custom-background-image):before {
+    top: 0;
+  }
 
-	body:not(.custom-background-image).admin-bar:before {
-		top: 46px;
-	}
+  /* line 2709, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.custom-background-image).admin-bar:before {
+    top: 46px;
+  }
 
-	body:not(.custom-background-image):after {
-		bottom: 0;
-	}
+  /* line 2713, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.custom-background-image):after {
+    bottom: 0;
+  }
 
-	.site {
-		margin: 21px;
-	}
+  /* line 2717, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site {
+    margin: 21px;
+  }
 
-	.site-main {
-		margin-bottom: 5.25em;
-	}
+  /* line 2721, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-main {
+    margin-bottom: 5.25em;
+  }
 
-	.site-header {
-		padding: 3.9375em 7.6923%;
-	}
+  /* line 2725, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header {
+    padding: 3.9375em 7.6923%;
+  }
 
-	.site-branding {
-		margin-top: 1.3125em;
-		margin-bottom: 1.3125em;
-	}
+  /* line 2729, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-branding {
+    margin-top: 1.3125em;
+    margin-bottom: 1.3125em;
+  }
 
-	.custom-logo {
-		max-width: 210px;
-	}
+  /* line 2734, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .custom-logo {
+    max-width: 210px;
+  }
 
-	.site-title {
-		font-size: 28px;
-		font-size: 1.75rem;
-		line-height: 1.25;
-	}
+  /* line 2738, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-title {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
 
-	.wp-custom-logo .site-title {
-		margin-top: 0.5em;
-	}
+  /* line 2744, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .wp-custom-logo .site-title {
+    margin-top: 0.5em;
+  }
 
-	.site-description {
-		display: block;
-	}
+  /* line 2748, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-description {
+    display: block;
+  }
 
-	.menu-toggle {
-		font-size: 16px;
-		font-size: 1.0rem;
-		margin: 1.3125em 0;
-		padding: 0.8125em 0.875em 0.6875em;
-	}
+  /* line 2752, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .menu-toggle {
+    font-size: 16px;
+    font-size: 1.0rem;
+    margin: 1.3125em 0;
+    padding: 0.8125em 0.875em 0.6875em;
+  }
 
-	.site-header-menu {
-		margin: 1.3125em 0;
-	}
+  /* line 2759, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header-menu {
+    margin: 1.3125em 0;
+  }
 
-	.site-header .main-navigation + .social-navigation {
-		margin-top: 2.625em;
-	}
+  /* line 2763, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header .main-navigation + .social-navigation {
+    margin-top: 2.625em;
+  }
 
-	.header-image {
-		margin: 1.3125em 0;
-	}
+  /* line 2767, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .header-image {
+    margin: 1.3125em 0;
+  }
 
-	.pagination {
-		margin: 0 23.0769% 4.421052632em 7.6923%
-	}
+  /* line 2771, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .pagination {
+    margin: 0 23.0769% 4.42105em 7.6923%;
+  }
 
-	.post-navigation {
-		margin-bottom: 5.25em;
-	}
+  /* line 2775, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .post-navigation {
+    margin-bottom: 5.25em;
+  }
 
-	.post-navigation .post-title {
-		font-size: 28px;
-		font-size: 1.75rem;
-		line-height: 1.25;
-	}
+  /* line 2779, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .post-navigation .post-title {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
 
-	/* restore screen-reader-text */
-	.pagination .current .screen-reader-text {
-		position: absolute !important;
-	}
+  /* restore screen-reader-text */
+  /* line 2786, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .pagination .current .screen-reader-text {
+    position: absolute !important;
+  }
 
-	.pagination .page-numbers {
-		display: inline-block;
-	}
+  /* line 2790, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .pagination .page-numbers {
+    display: inline-block;
+  }
 
-	.site-main > article {
-		margin-bottom: 5.25em;
-	}
+  /* line 2794, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-main > article {
+    margin-bottom: 5.25em;
+  }
 
-	.entry-header,
-	.post-thumbnail,
-	.entry-content,
-	.entry-summary,
-	.entry-footer,
-	.comments-area,
-	.image-navigation,
-	.post-navigation,
-	.page-header,
-	.page-content,
-	.content-bottom-widgets {
-		margin-right: 23.0769%;
-	}
+  /* line 2798, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-header,
+  .post-thumbnail,
+  .entry-content,
+  .entry-summary,
+  .entry-footer,
+  .comments-area,
+  .image-navigation,
+  .post-navigation,
+  .page-header,
+  .page-content,
+  .content-bottom-widgets {
+    margin-right: 23.0769%;
+  }
 
-	.entry-title {
-		font-size: 33px;
-		font-size: 2.0625rem;
-		line-height: 1.2727272727;
-		margin-bottom: 0.8484848485em;
-	}
+  /* line 2812, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-title {
+    font-size: 33px;
+    font-size: 2.0625rem;
+    line-height: 1.2727272727;
+    margin-bottom: 0.8484848485em;
+  }
 
-	.entry-content blockquote.alignleft,
-	.entry-content blockquote.alignright {
-		border-width: 4px 0 0 0;
-		padding: 0.9473684211em 0 0;
-		width: -webkit-calc(50% - 0.736842105em);
-		width: calc(50% - 0.736842105em);
-	}
+  /* line 2819, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content blockquote.alignleft,
+  .entry-content blockquote.alignright {
+    border-width: 4px 0 0 0;
+    padding: 0.9473684211em 0 0;
+    width: -webkit-calc(50% - 0.736842105em);
+    width: calc(50% - 0.736842105em);
+  }
 
-	.entry-content blockquote:not(.alignleft):not(.alignright),
-	.entry-summary blockquote,
-	.comment-content blockquote {
-		margin-left: -1.473684211em;
-	}
+  /* line 2827, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content blockquote:not(.alignleft):not(.alignright),
+  .entry-summary blockquote,
+  .comment-content blockquote {
+    margin-left: -1.473684211em;
+  }
 
-	.entry-content blockquote blockquote:not(.alignleft):not(.alignright),
-	.entry-summary blockquote blockquote,
-	.comment-content blockquote blockquote {
-		margin-left: 0;
-	}
+  /* line 2833, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content blockquote blockquote:not(.alignleft):not(.alignright),
+  .entry-summary blockquote blockquote,
+  .comment-content blockquote blockquote {
+    margin-left: 0;
+  }
 
-	.entry-content ul,
-	.entry-summary ul,
-	.comment-content ul,
-	.entry-content ol,
-	.entry-summary ol,
-	.comment-content ol {
-		margin-left: 0;
-	}
+  /* line 2839, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content ul,
+  .entry-summary ul,
+  .comment-content ul,
+  .entry-content ol,
+  .entry-summary ol,
+  .comment-content ol {
+    margin-left: 0;
+  }
 
-	.entry-content li > ul,
-	.entry-summary li > ul,
-	.comment-content li > ul,
-	.entry-content blockquote > ul,
-	.entry-summary blockquote > ul,
-	.comment-content blockquote > ul {
-		margin-left: 1.25em;
-	}
+  /* line 2848, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content li > ul,
+  .entry-summary li > ul,
+  .comment-content li > ul,
+  .entry-content blockquote > ul,
+  .entry-summary blockquote > ul,
+  .comment-content blockquote > ul {
+    margin-left: 1.25em;
+  }
 
-	.entry-content li > ol,
-	.entry-summary li > ol,
-	.comment-content li > ol,
-	.entry-content blockquote > ol,
-	.entry-summary blockquote > ol,
-	.comment-content blockquote > ol {
-		margin-left: 1.5em;
-	}
+  /* line 2857, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content li > ol,
+  .entry-summary li > ol,
+  .comment-content li > ol,
+  .entry-content blockquote > ol,
+  .entry-summary blockquote > ol,
+  .comment-content blockquote > ol {
+    margin-left: 1.5em;
+  }
 
-	.comment-author {
-		margin-bottom: 0;
-	}
+  /* line 2866, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .comment-author {
+    margin-bottom: 0;
+  }
 
-	.comment-author .avatar {
-		height: 42px;
-		position: relative;
-		top: 0.25em;
-		width: 42px;
-	}
+  /* line 2870, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .comment-author .avatar {
+    height: 42px;
+    position: relative;
+    top: 0.25em;
+    width: 42px;
+  }
 
-	.comment-list .children > li {
-		padding-left: 1.75em;
-	}
+  /* line 2877, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .comment-list .children > li {
+    padding-left: 1.75em;
+  }
 
-	.comment-list + .comment-respond,
-	.comment-navigation + .comment-respond {
-		padding-top: 3.5em;
-	}
+  /* line 2881, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .comment-list + .comment-respond,
+  .comment-navigation + .comment-respond {
+    padding-top: 3.5em;
+  }
 
-	.comments-area,
-	.widget,
-	.content-bottom-widgets .widget-area {
-		margin-bottom: 5.25em;
-	}
+  /* line 2886, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .comments-area,
+  .widget,
+  .content-bottom-widgets .widget-area {
+    margin-bottom: 5.25em;
+  }
 
-	.sidebar,
-	.widecolumn {
-		margin-bottom: 5.25em;
-		padding-right: 23.0769%;
-	}
+  /* line 2892, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .sidebar,
+  .widecolumn {
+    margin-bottom: 5.25em;
+    padding-right: 23.0769%;
+  }
 
-	body:not(.search-results) .entry-summary li > ul,
-	body:not(.search-results) .entry-summary blockquote > ul {
-		margin-left: 1.157894737em;
-	}
+  /* line 2898, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary li > ul,
+  body:not(.search-results) .entry-summary blockquote > ul {
+    margin-left: 1.157894737em;
+  }
 
-	body:not(.search-results) .entry-summary li > ol,
-	body:not(.search-results) .entry-summary blockquote > ol {
-		margin-left: 1.473684211em;
-	}
+  /* line 2903, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary li > ol,
+  body:not(.search-results) .entry-summary blockquote > ol {
+    margin-left: 1.473684211em;
+  }
 }
-
-
 /**
  * 14.2 - >= 783px
  */
-
 @media screen and (min-width: 48.9375em) {
-	body:not(.custom-background-image).admin-bar:before {
-		top: 32px;
-	}
+  /* line 2915, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.custom-background-image).admin-bar:before {
+    top: 32px;
+  }
 }
-
-
 /**
  * 14.3 - >= 910px
  */
-
 @media screen and (min-width: 56.875em) {
-	.site-header {
-		padding-right: 4.5455%;
-		padding-left: 4.5455%;
-	}
-
-	.site-header-main {
-		-webkit-align-items: flex-start;
-		-ms-flex-align: start;
-		align-items: flex-start;
-	}
-
-	.wp-custom-logo .site-header-main {
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-	}
-
-	.site-header-menu {
-		display: block;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
-		flex: 0 1 auto;
-	}
-
-	.main-navigation {
-		margin: 0 -0.875em;
-	}
-
-	.main-navigation .primary-menu,
-	.main-navigation .primary-menu > li {
-		border: 0;
-	}
-
-	.main-navigation .primary-menu > li {
-		float: left;
-	}
-
-	.main-navigation a {
-		outline-offset: -8px;
-		padding: 0.65625em 0.875em;
-		white-space: nowrap;
-	}
-
-	.main-navigation li:hover > a,
-	.main-navigation li.focus > a {
-		color: #007acc;
-	}
-
-	.main-navigation ul ul {
-		border-bottom: 1px solid #d1d1d1;
-		display: block;
-		left: -999em;
-		margin: 0;
-		position: absolute;
-		z-index: 99999;
-	}
-
-	.main-navigation ul ul ul {
-		top: -1px;
-	}
-
-	.main-navigation ul ul ul:before,
-	.main-navigation ul ul ul:after {
-		border: 0;
-	}
-
-	.main-navigation ul ul li {
-		background-color: #fff;
-		border: 1px solid #d1d1d1;
-		border-bottom-width: 0;
-	}
-
-	.main-navigation ul ul a {
-		white-space: normal;
-		width: 12.6875em;
-	}
-
-	.main-navigation ul ul:before,
-	.main-navigation ul ul:after {
-		border-style: solid;
-		content: "";
-		position: absolute;
-	}
-
-	.main-navigation ul ul:before {
-		border-color: #d1d1d1 transparent;
-		border-width: 0 10px 10px;
-		right: 9px;
-		top: -9px;
-	}
-
-	.main-navigation ul ul:after {
-		border-color: #fff transparent;
-		border-width: 0 8px 8px;
-		right: 11px;
-		top: -7px;
-	}
-
-	.main-navigation li:hover > ul,
-	.main-navigation li.focus > ul {
-		left: auto;
-		right: 0;
-	}
-
-	.main-navigation ul ul li:hover > ul,
-	.main-navigation ul ul li.focus > ul {
-		left: auto;
-		right: 100%;
-	}
-
-	.main-navigation .menu-item-has-children > a {
-		margin: 0;
-		padding-right: 2.25em;
-	}
-
-	.main-navigation .menu-item-has-children > a:after {
-		content: "\f431";
-		position: absolute;
-		right: 0.625em;
-		top: 0.8125em;
-	}
-
-	.main-navigation ul ul .menu-item-has-children > a {
-		padding-right: 2.0625em;
-	}
-
-	.main-navigation ul ul .menu-item-has-children > a:after {
-		right: 0.5625em;
-		top: 0.875em;
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		transform: rotate(90deg);
-	}
-
-	.dropdown-toggle,
-	.main-navigation ul .dropdown-toggle.toggled-on,
-	.menu-toggle,
-	.site-header .social-navigation,
-	.site-footer .main-navigation {
-		display: none;
-	}
-
-	.site-content {
-		padding: 0 4.5455%;
-	}
-
-	.content-area {
-		float: left;
-		margin-right: -100%;
-		width: 70%;
-	}
-
-	.entry-header,
-	.post-thumbnail,
-	.entry-content,
-	.entry-summary,
-	.entry-footer,
-	.comments-area,
-	.image-navigation,
-	.post-navigation,
-	.pagination,
-	.page-header,
-	.page-content,
-	.content-bottom-widgets {
-		margin-right: 0;
-		margin-left: 0;
-	}
-
-	.sidebar {
-		float: left;
-		margin-left: 75%;
-		padding: 0;
-		width: 25%;
-	}
-
-	.widget {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		line-height: 1.6153846154;
-		margin-bottom: 3.230769231em;
-		padding-top: 1.615384615em;
-	}
-
-	.widget .widget-title {
-		margin-bottom: 1.3125em;
-	}
-
-	.widget p,
-	.widget address,
-	.widget hr,
-	.widget ul,
-	.widget ol,
-	.widget dl,
-	.widget dd,
-	.widget table {
-		margin-bottom: 1.6153846154em;
-	}
-
-	.widget li > ul,
-	.widget li > ol {
-		margin-bottom: 0;
-	}
-
-	.widget blockquote {
-		font-size: 16px;
-		font-size: 1rem;
-		line-height: 1.3125;
-		margin-bottom: 1.3125em;
-		padding-left: 1.0625em;
-	}
-
-	.widget blockquote cite,
-	.widget blockquote small {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		line-height: 1.6153846154;
-	}
-
-	.widget th,
-	.widget td {
-		padding: 0.5384615385em;
-	}
-
-	.widget pre {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		line-height: 1.6153846154;
-		margin-bottom: 1.6153846154em;
-		padding: 0.5384615385em;
-	}
-
-	.widget fieldset {
-		margin-bottom: 1.6153846154em;
-		padding: 0.5384615385em;
-	}
-
-	.widget button,
-	.widget input,
-	.widget select,
-	.widget textarea {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		line-height: 1.6153846154;
-	}
-
-	.widget button,
-	.widget input[type="button"],
-	.widget input[type="reset"],
-	.widget input[type="submit"] {
-		line-height: 1;
-		padding: 0.846153846em;
-	}
-
-	.widget input[type="text"],
-	.widget input[type="email"],
-	.widget input[type="url"],
-	.widget input[type="password"],
-	.widget input[type="search"],
-	.widget input[type="tel"],
-	.widget input[type="number"],
-	.widget textarea {
-		padding: 0.4615384615em 0.5384615385em;
-	}
-
-	.widget h1 {
-		font-size: 23px;
-		font-size: 1.4375rem;
-		line-height: 1.2173913043;
-		margin-bottom: 0.9130434783em;
-	}
-
-	.widget h2 {
-		font-size: 19px;
-		font-size: 1.1875rem;
-		line-height: 1.1052631579;
-		margin-bottom: 1.1052631579em;
-	}
-
-	.widget h3 {
-		font-size: 16px;
-		font-size: 1rem;
-		line-height: 1.3125;
-		margin-bottom: 1.3125em;
-	}
-
-	.widget h4,
-	.widget h5,
-	.widget h6 {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		line-height: 1.6153846154;
-		margin-bottom: 0.9130434783em;
-	}
-
-	.widget .alignleft {
-		margin: 0.2307692308em 1.6153846154em 1.6153846154em 0;
-	}
-
-	.widget .alignright {
-		margin: 0.2307692308em 0 1.6153846154em 1.6153846154em;
-	}
-
-	.widget .aligncenter {
-		margin-bottom: 1.6153846154em;
-	}
-
-	.widget_calendar td,
-	.widget_calendar th {
-		line-height: 2.6923076923;
-		padding: 0;
-	}
-
-	.widget_rss .rssSummary:last-child {
-		margin-bottom: 1.615384615em;
-	}
-
-	.widget input[type="search"].search-field {
-		width: -webkit-calc(100% - 35px);
-		width: calc(100% - 35px);
-	}
-
-	.widget .search-submit:before {
-		font-size: 16px;
-		left: 1px;
-		line-height: 35px;
-		width: 34px;
-	}
-
-	.widget button.search-submit {
-		padding: 0;
-		width: 35px;
-	}
-
-	.tagcloud a {
-		margin: 0 0.2307692308em 0.5384615385em 0;
-		padding: 0.5384615385em 0.4615384615em 0.4615384615em;
-	}
-
-	.textwidget h1 {
-		margin-top: 1.8260869565em;
-	}
-
-	.textwidget h2 {
-		margin-top: 2.2105263158em;
-	}
-
-	.textwidget h3 {
-		margin-top: 2.625em;
-	}
-
-	.textwidget h4 {
-		letter-spacing: 0.153846154em;
-	}
-
-	.textwidget h4,
-	.textwidget h5,
-	.textwidget h6 {
-		margin-top: 3.2307692308em;
-	}
-
-	.content-bottom-widgets .widget-area:nth-child(1):nth-last-child(2),
-	.content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1) {
-		float: left;
-		margin-right: 7.1428571%;
-		width: 46.42857145%;
-	}
-
-	.content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1):last-of-type {
-		margin-right: 0;
-	}
-
-	.site-footer {
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		padding: 0 4.5455% 3.5em;
-	}
-
-	.site-footer .social-navigation {
-		margin: 0;
-		-webkit-order: 2;
-		-ms-flex-order: 2;
-		order: 2;
-	}
-
-	.site-info {
-		margin: 0.538461538em auto 0.538461538em 0;
-		-webkit-order: 1;
-		-ms-flex-order: 1;
-		order: 1;
-	}
-
-	.no-sidebar .content-area {
-		float: none;
-		margin: 0;
-		width: 100%;
-	}
-
-	.no-sidebar .entry-header,
-	.no-sidebar .entry-content,
-	.no-sidebar .entry-summary,
-	.no-sidebar .entry-footer,
-	.no-sidebar .comments-area,
-	.no-sidebar .image-navigation,
-	.no-sidebar .post-navigation,
-	.no-sidebar .pagination,
-	.no-sidebar .page-header,
-	.no-sidebar .page-content,
-	.no-sidebar .content-bottom-widgets {
-		margin-right: 15%;
-		margin-left: 15%;
-	}
-
-	.widecolumn {
-		padding-right: 15%;
-		padding-left: 15%;
-	}
+  /* line 2926, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header {
+    padding-right: 4.5455%;
+    padding-left: 4.5455%;
+  }
+
+  /* line 2931, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header-main {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  /* line 2937, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .wp-custom-logo .site-header-main {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  /* line 2943, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header-menu {
+    display: block;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  /* line 2950, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation {
+    margin: 0 -0.875em;
+  }
+
+  /* line 2954, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation .primary-menu,
+  .main-navigation .primary-menu > li {
+    border: 0;
+  }
+
+  /* line 2959, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation .primary-menu > li {
+    float: left;
+  }
+
+  /* line 2963, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation a {
+    outline-offset: -8px;
+    padding: 0.65625em 0.875em;
+    white-space: nowrap;
+  }
+
+  /* line 2969, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation li:hover > a,
+  .main-navigation li.focus > a {
+    color: #007acc;
+  }
+
+  /* line 2974, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul {
+    border-bottom: 1px solid #d1d1d1;
+    display: block;
+    left: -999em;
+    margin: 0;
+    position: absolute;
+    z-index: 99999;
+  }
+
+  /* line 2983, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul ul {
+    top: -1px;
+  }
+
+  /* line 2987, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul ul:before,
+  .main-navigation ul ul ul:after {
+    border: 0;
+  }
+
+  /* line 2992, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul li {
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-bottom-width: 0;
+  }
+
+  /* line 2998, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul a {
+    white-space: normal;
+    width: 12.6875em;
+  }
+
+  /* line 3003, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul:before,
+  .main-navigation ul ul:after {
+    border-style: solid;
+    content: "";
+    position: absolute;
+  }
+
+  /* line 3010, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul:before {
+    border-color: #d1d1d1 transparent;
+    border-width: 0 10px 10px;
+    right: 9px;
+    top: -9px;
+  }
+
+  /* line 3017, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul:after {
+    border-color: #fff transparent;
+    border-width: 0 8px 8px;
+    right: 11px;
+    top: -7px;
+  }
+
+  /* line 3024, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation li:hover > ul,
+  .main-navigation li.focus > ul {
+    left: auto;
+    right: 0;
+  }
+
+  /* line 3030, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul li:hover > ul,
+  .main-navigation ul ul li.focus > ul {
+    left: auto;
+    right: 100%;
+  }
+
+  /* line 3036, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation .menu-item-has-children > a {
+    margin: 0;
+    padding-right: 2.25em;
+  }
+
+  /* line 3041, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation .menu-item-has-children > a:after {
+    content: "\f431";
+    position: absolute;
+    right: 0.625em;
+    top: 0.8125em;
+  }
+
+  /* line 3048, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul .menu-item-has-children > a {
+    padding-right: 2.0625em;
+  }
+
+  /* line 3052, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .main-navigation ul ul .menu-item-has-children > a:after {
+    right: 0.5625em;
+    top: 0.875em;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  /* line 3061, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .dropdown-toggle,
+  .main-navigation ul .dropdown-toggle.toggled-on,
+  .menu-toggle,
+  .site-header .social-navigation,
+  .site-footer .main-navigation {
+    display: none;
+  }
+
+  /* line 3069, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-content {
+    padding: 0 4.5455%;
+  }
+
+  /* line 3073, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .content-area {
+    float: left;
+    margin-right: -100%;
+    width: 70%;
+  }
+
+  /* line 3079, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-header,
+  .post-thumbnail,
+  .entry-content,
+  .entry-summary,
+  .entry-footer,
+  .comments-area,
+  .image-navigation,
+  .post-navigation,
+  .pagination,
+  .page-header,
+  .page-content,
+  .content-bottom-widgets {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  /* line 3095, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .sidebar {
+    float: left;
+    margin-left: 75%;
+    padding: 0;
+    width: 25%;
+  }
+
+  /* line 3102, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.6153846154;
+    margin-bottom: 3.230769231em;
+    padding-top: 1.615384615em;
+  }
+
+  /* line 3110, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget .widget-title {
+    margin-bottom: 1.3125em;
+  }
+
+  /* line 3114, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget p,
+  .widget address,
+  .widget hr,
+  .widget ul,
+  .widget ol,
+  .widget dl,
+  .widget dd,
+  .widget table {
+    margin-bottom: 1.6153846154em;
+  }
+
+  /* line 3125, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget li > ul,
+  .widget li > ol {
+    margin-bottom: 0;
+  }
+
+  /* line 3130, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget blockquote {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.3125;
+    margin-bottom: 1.3125em;
+    padding-left: 1.0625em;
+  }
+
+  /* line 3138, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget blockquote cite,
+  .widget blockquote small {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.6153846154;
+  }
+
+  /* line 3145, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget th,
+  .widget td {
+    padding: 0.5384615385em;
+  }
+
+  /* line 3150, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget pre {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.6153846154;
+    margin-bottom: 1.6153846154em;
+    padding: 0.5384615385em;
+  }
+
+  /* line 3158, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget fieldset {
+    margin-bottom: 1.6153846154em;
+    padding: 0.5384615385em;
+  }
+
+  /* line 3163, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget button,
+  .widget input,
+  .widget select,
+  .widget textarea {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.6153846154;
+  }
+
+  /* line 3172, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget button,
+  .widget input[type="button"],
+  .widget input[type="reset"],
+  .widget input[type="submit"] {
+    line-height: 1;
+    padding: 0.846153846em;
+  }
+
+  /* line 3180, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget input[type="text"],
+  .widget input[type="email"],
+  .widget input[type="url"],
+  .widget input[type="password"],
+  .widget input[type="search"],
+  .widget input[type="tel"],
+  .widget input[type="number"],
+  .widget textarea {
+    padding: 0.4615384615em 0.5384615385em;
+  }
+
+  /* line 3191, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget h1 {
+    font-size: 23px;
+    font-size: 1.4375rem;
+    line-height: 1.2173913043;
+    margin-bottom: 0.9130434783em;
+  }
+
+  /* line 3198, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget h2 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.1052631579;
+    margin-bottom: 1.1052631579em;
+  }
+
+  /* line 3205, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget h3 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.3125;
+    margin-bottom: 1.3125em;
+  }
+
+  /* line 3212, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget h4,
+  .widget h5,
+  .widget h6 {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.6153846154;
+    margin-bottom: 0.9130434783em;
+  }
+
+  /* line 3221, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget .alignleft {
+    margin: 0.2307692308em 1.6153846154em 1.6153846154em 0;
+  }
+
+  /* line 3225, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget .alignright {
+    margin: 0.2307692308em 0 1.6153846154em 1.6153846154em;
+  }
+
+  /* line 3229, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget .aligncenter {
+    margin-bottom: 1.6153846154em;
+  }
+
+  /* line 3233, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget_calendar td,
+  .widget_calendar th {
+    line-height: 2.6923076923;
+    padding: 0;
+  }
+
+  /* line 3239, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget_rss .rssSummary:last-child {
+    margin-bottom: 1.615384615em;
+  }
+
+  /* line 3243, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget input[type="search"].search-field {
+    width: -webkit-calc(100% - 35px);
+    width: calc(100% - 35px);
+  }
+
+  /* line 3248, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget .search-submit:before {
+    font-size: 16px;
+    left: 1px;
+    line-height: 35px;
+    width: 34px;
+  }
+
+  /* line 3255, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget button.search-submit {
+    padding: 0;
+    width: 35px;
+  }
+
+  /* line 3260, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .tagcloud a {
+    margin: 0 0.2307692308em 0.5384615385em 0;
+    padding: 0.5384615385em 0.4615384615em 0.4615384615em;
+  }
+
+  /* line 3265, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .textwidget h1 {
+    margin-top: 1.8260869565em;
+  }
+
+  /* line 3269, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .textwidget h2 {
+    margin-top: 2.2105263158em;
+  }
+
+  /* line 3273, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .textwidget h3 {
+    margin-top: 2.625em;
+  }
+
+  /* line 3277, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .textwidget h4 {
+    letter-spacing: 0.153846154em;
+  }
+
+  /* line 3281, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .textwidget h4,
+  .textwidget h5,
+  .textwidget h6 {
+    margin-top: 3.2307692308em;
+  }
+
+  /* line 3287, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .content-bottom-widgets .widget-area:nth-child(1):nth-last-child(2),
+  .content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1) {
+    float: left;
+    margin-right: 7.1428571%;
+    width: 46.42857145%;
+  }
+
+  /* line 3294, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1):last-of-type {
+    margin-right: 0;
+  }
+
+  /* line 3298, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-footer {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4.5455% 3.5em;
+  }
+
+  /* line 3311, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-footer .social-navigation {
+    margin: 0;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  /* line 3318, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-info {
+    margin: 0.538461538em auto 0.538461538em 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  /* line 3325, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .no-sidebar .content-area {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* line 3331, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .no-sidebar .entry-header,
+  .no-sidebar .entry-content,
+  .no-sidebar .entry-summary,
+  .no-sidebar .entry-footer,
+  .no-sidebar .comments-area,
+  .no-sidebar .image-navigation,
+  .no-sidebar .post-navigation,
+  .no-sidebar .pagination,
+  .no-sidebar .page-header,
+  .no-sidebar .page-content,
+  .no-sidebar .content-bottom-widgets {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  /* line 3346, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widecolumn {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
 }
-
-
 /**
  * 14.4 - >= 985px
  */
-
 @media screen and (min-width: 61.5625em) {
-	.site-main {
-		margin-bottom: 7.0em;
-	}
+  /* line 3358, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-main {
+    margin-bottom: 7.0em;
+  }
 
-	.site-header {
-		padding: 5.25em 4.5455%;
-	}
+  /* line 3362, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header {
+    padding: 5.25em 4.5455%;
+  }
 
-	.site-branding,
-	.site-header-menu,
-	.header-image {
-		margin-top: 1.75em;
-		margin-bottom: 1.75em;
-	}
+  /* line 3366, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-branding,
+  .site-header-menu,
+  .header-image {
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
+  }
 
-	.custom-logo {
-		max-width: 240px;
-	}
+  /* line 3373, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .custom-logo {
+    max-width: 240px;
+  }
 
-	.image-navigation {
-		margin-bottom: 3.230769231em;
-	}
+  /* line 3377, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .image-navigation {
+    margin-bottom: 3.230769231em;
+  }
 
-	.post-navigation {
-		margin-bottom: 7.0em;
-	}
+  /* line 3381, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .post-navigation {
+    margin-bottom: 7.0em;
+  }
 
-	.pagination {
-		margin-bottom: 5.894736842em;
-	}
+  /* line 3385, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .pagination {
+    margin-bottom: 5.894736842em;
+  }
 
-	.widget {
-		margin-bottom: 4.307692308em;
-	}
+  /* line 3389, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .widget {
+    margin-bottom: 4.307692308em;
+  }
 
-	.site-main > article {
-		margin-bottom: 7.0em;
-	}
+  /* line 3393, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-main > article {
+    margin-bottom: 7.0em;
+  }
 
-	.entry-title {
-		font-size: 40px;
-		font-size: 2.5rem;
-		line-height: 1.225;
-		margin-bottom: 1.05em;
-	}
+  /* line 3397, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-title {
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 1.225;
+    margin-bottom: 1.05em;
+  }
 
-	.format-aside .entry-title,
-	.format-image .entry-title,
-	.format-video .entry-title,
-	.format-quote .entry-title,
-	.format-gallery .entry-title,
-	.format-status .entry-title,
-	.format-link .entry-title,
-	.format-audio .entry-title,
-	.format-chat .entry-title {
-		font-size: 23px;
-		font-size: 1.4375em;
-		line-height: 1.304347826;
-		margin-bottom: 1.826086957em;
-	}
+  /* line 3404, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .format-aside .entry-title,
+  .format-image .entry-title,
+  .format-video .entry-title,
+  .format-quote .entry-title,
+  .format-gallery .entry-title,
+  .format-status .entry-title,
+  .format-link .entry-title,
+  .format-audio .entry-title,
+  .format-chat .entry-title {
+    font-size: 23px;
+    font-size: 1.4375em;
+    line-height: 1.304347826;
+    margin-bottom: 1.826086957em;
+  }
 
-	.post-thumbnail {
-		margin-bottom: 2.625em;
-	}
+  /* line 3419, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .post-thumbnail {
+    margin-bottom: 2.625em;
+  }
 
-	.entry-content h1,
-	.entry-summary h1,
-	.comment-content h1 {
-		font-size: 33px;
-		font-size: 2.0625rem;
-		line-height: 1.2727272727;
-		margin-top: 1.696969697em;
-		margin-bottom: 0.8484848485em;
-	}
+  /* line 3423, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content h1,
+  .entry-summary h1,
+  .comment-content h1 {
+    font-size: 33px;
+    font-size: 2.0625rem;
+    line-height: 1.2727272727;
+    margin-top: 1.696969697em;
+    margin-bottom: 0.8484848485em;
+  }
 
-	.entry-content h2,
-	.entry-summary h2,
-	.comment-content h2 {
-		font-size: 28px;
-		font-size: 1.75rem;
-		line-height: 1.25;
-		margin-top: 2em;
-		margin-bottom: 1em;
-	}
+  /* line 3433, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content h2,
+  .entry-summary h2,
+  .comment-content h2 {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
 
-	.entry-content h3,
-	.entry-summary h3,
-	.comment-content h3 {
-		font-size: 23px;
-		font-size: 1.4375rem;
-		line-height: 1.2173913043;
-		margin-top: 2.4347826087em;
-		margin-bottom: 1.2173913043em;
-	}
+  /* line 3443, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content h3,
+  .entry-summary h3,
+  .comment-content h3 {
+    font-size: 23px;
+    font-size: 1.4375rem;
+    line-height: 1.2173913043;
+    margin-top: 2.4347826087em;
+    margin-bottom: 1.2173913043em;
+  }
 
-	.entry-content h4,
-	.entry-summary h4,
-	.entry-intro h4,
-	.comment-content h4 {
-		letter-spacing: 0.131578947em;
-	}
+  /* line 3453, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content h4,
+  .entry-summary h4,
+  .entry-intro h4,
+  .comment-content h4 {
+    letter-spacing: 0.131578947em;
+  }
 
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6,
-	.entry-summary h4,
-	.entry-summary h5,
-	.entry-summary h6,
-	.comment-content h4,
-	.comment-content h5,
-	.comment-content h6 {
-		font-size: 19px;
-		font-size: 1.1875rem;
-		line-height: 1.1052631579;
-		margin-top: 2.9473684211em;
-		margin-bottom: 1.473684211em;
-	}
+  /* line 3460, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content h4,
+  .entry-content h5,
+  .entry-content h6,
+  .entry-summary h4,
+  .entry-summary h5,
+  .entry-summary h6,
+  .comment-content h4,
+  .comment-content h5,
+  .comment-content h6 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.1052631579;
+    margin-top: 2.9473684211em;
+    margin-bottom: 1.473684211em;
+  }
 
-	.author-info {
-		border-bottom-width: 0;
-		padding-bottom: 0;
-	}
+  /* line 3476, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .author-info {
+    border-bottom-width: 0;
+    padding-bottom: 0;
+  }
 
-	.comment-list + .comment-respond,
-	.comment-navigation + .comment-respond {
-		padding-top: 5.25em;
-	}
+  /* line 3481, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .comment-list + .comment-respond,
+  .comment-navigation + .comment-respond {
+    padding-top: 5.25em;
+  }
 
-	.comments-area,
-	.sidebar,
-	.content-bottom-widgets .widget-area,
-	.widecolumn {
-		margin-bottom: 7.0em;
-	}
+  /* line 3486, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .comments-area,
+  .sidebar,
+  .content-bottom-widgets .widget-area,
+  .widecolumn {
+    margin-bottom: 7.0em;
+  }
 
-	body:not(.search-results) .entry-summary {
-		margin-bottom: 2.210526316em;
-	}
+  /* line 3493, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary {
+    margin-bottom: 2.210526316em;
+  }
 
-	body:not(.search-results) .entry-header + .entry-summary {
-		margin-top: -1.105263158em;
-	}
+  /* line 3497, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-header + .entry-summary {
+    margin-top: -1.105263158em;
+  }
 
-	body:not(.search-results) article:not(.type-page) .entry-content {
-		float: right;
-		width: 71.42857144%;
-	}
+  /* line 3501, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) .entry-content {
+    float: right;
+    width: 71.42857144%;
+  }
 
-	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
-		margin-left: -40%;
-		width: -webkit-calc(60% - 1.4736842105em);
-		width: calc(60% - 1.4736842105em);
-	}
+  /* line 3506, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
+    margin-left: -40%;
+    width: -webkit-calc(60% - 1.4736842105em);
+    width: calc(60% - 1.4736842105em);
+  }
 
-	body:not(.search-results) article:not(.type-page) img.below-entry-meta,
-	body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
-		clear: both;
-		display: block;
-		float: none;
-		margin-right: 0;
-		margin-left: -40%;
-		max-width: 140%;
-	}
+  /* line 3512, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) img.below-entry-meta,
+  body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
+    clear: both;
+    display: block;
+    float: none;
+    margin-right: 0;
+    margin-left: -40%;
+    max-width: 140%;
+  }
 
-	body:not(.search-results) article:not(.type-page) figure.below-entry-meta img.below-entry-meta,
-	body:not(.search-results) article:not(.type-page) table figure.below-entry-meta,
-	body:not(.search-results) article:not(.type-page) table img.below-entry-meta {
-		margin: 0;
-		max-width: 100%;
-	}
+  /* line 3522, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) figure.below-entry-meta img.below-entry-meta,
+  body:not(.search-results) article:not(.type-page) table figure.below-entry-meta,
+  body:not(.search-results) article:not(.type-page) table img.below-entry-meta {
+    margin: 0;
+    max-width: 100%;
+  }
 
-	body:not(.search-results) article:not(.type-page) .entry-footer {
-		float: left;
-		margin-top: 0.1538461538em;
-		width: 21.42857143%;
-	}
+  /* line 3529, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) .entry-footer {
+    float: left;
+    margin-top: 0.1538461538em;
+    width: 21.42857143%;
+  }
 
-	body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
-		display: none;
-	}
+  /* line 3535, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
+    display: none;
+  }
 
-	.single .byline,
-	.full-size-link,
-	body:not(.search-results).group-blog .byline,
-	body:not(.search-results) .entry-format,
-	body:not(.search-results) .cat-links,
-	body:not(.search-results) .tags-links,
-	body:not(.search-results) article:not(.sticky) .posted-on,
-	body:not(.search-results) article:not(.type-page) .comments-link,
-	body:not(.search-results) article:not(.type-page) .entry-footer .edit-link {
-		display: block;
-		margin-bottom: 0.5384615385em;
-	}
+  /* line 3539, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .single .byline,
+  .full-size-link,
+  body:not(.search-results).group-blog .byline,
+  body:not(.search-results) .entry-format,
+  body:not(.search-results) .cat-links,
+  body:not(.search-results) .tags-links,
+  body:not(.search-results) article:not(.sticky) .posted-on,
+  body:not(.search-results) article:not(.type-page) .comments-link,
+  body:not(.search-results) article:not(.type-page) .entry-footer .edit-link {
+    display: block;
+    margin-bottom: 0.5384615385em;
+  }
 
-	body:not(.search-results) article:not(.type-page) .entry-footer > span:last-child {
-		margin-bottom: 0;
-	}
+  /* line 3552, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) .entry-footer > span:last-child {
+    margin-bottom: 0;
+  }
 
-	body:not(.search-results) article:not(.type-page) .entry-footer .avatar {
-		display: block;
-		height: auto;
-		margin: 0 0 0.5384615385em;
-		width: 49px;
-	}
+  /* line 3556, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) article:not(.type-page) .entry-footer .avatar {
+    display: block;
+    height: auto;
+    margin: 0 0 0.5384615385em;
+    width: 49px;
+  }
 
-	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
-		float: left;
-		margin-right: -100%;
-		margin-left: 34.99999999%;
-		width: 50.00000001%;
-	}
+  /* line 3563, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
+    float: left;
+    margin-right: -100%;
+    margin-left: 34.99999999%;
+    width: 50.00000001%;
+  }
 
-	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
-		margin-right: -100%;
-		margin-left: 15%;
-		width: 15%;
-	}
+  /* line 3570, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
+    margin-right: -100%;
+    margin-left: 15%;
+    width: 15%;
+  }
 }
-
-
 /**
  * 14.5 - >= 1200px
  */
-
 @media screen and (min-width: 75em) {
-	body:not(.search-results) .entry-summary {
-		font-size: 23px;
-		font-size: 1.4375rem;
-		line-height: 1.5217391304;
-		margin-bottom: 1.826086957em;
-	}
+  /* line 3583, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary {
+    font-size: 23px;
+    font-size: 1.4375rem;
+    line-height: 1.5217391304;
+    margin-bottom: 1.826086957em;
+  }
 
-	body:not(.search-results) .entry-header + .entry-summary {
-		margin-top: -0.913043478em;
-	}
+  /* line 3590, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-header + .entry-summary {
+    margin-top: -0.913043478em;
+  }
 
-	body:not(.search-results) .entry-summary p,
-	body:not(.search-results) .entry-summary address,
-	body:not(.search-results) .entry-summary hr,
-	body:not(.search-results) .entry-summary ul,
-	body:not(.search-results) .entry-summary ol,
-	body:not(.search-results) .entry-summary dl,
-	body:not(.search-results) .entry-summary dd,
-	body:not(.search-results) .entry-summary table {
-		margin-bottom: 1.5217391304em;
-	}
+  /* line 3594, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary p,
+  body:not(.search-results) .entry-summary address,
+  body:not(.search-results) .entry-summary hr,
+  body:not(.search-results) .entry-summary ul,
+  body:not(.search-results) .entry-summary ol,
+  body:not(.search-results) .entry-summary dl,
+  body:not(.search-results) .entry-summary dd,
+  body:not(.search-results) .entry-summary table {
+    margin-bottom: 1.5217391304em;
+  }
 
-	body:not(.search-results) .entry-summary li > ul,
-	body:not(.search-results) .entry-summary blockquote > ul {
-		margin-left: 0.956521739em;
-	}
+  /* line 3605, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary li > ul,
+  body:not(.search-results) .entry-summary blockquote > ul {
+    margin-left: 0.956521739em;
+  }
 
-	body:not(.search-results) .entry-summary li > ol,
-	body:not(.search-results) .entry-summary blockquote > ol {
-		margin-left: 1.52173913em;
-	}
+  /* line 3610, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary li > ol,
+  body:not(.search-results) .entry-summary blockquote > ol {
+    margin-left: 1.52173913em;
+  }
 
-	body:not(.search-results) .entry-summary blockquote {
-		font-size: 23px;
-		font-size: 1.4375rem;
-		line-height: 1.5217391304;
-		margin: 0 0 1.5217391304em;
-		padding-left: 1.347826087em;
-	}
+  /* line 3615, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary blockquote {
+    font-size: 23px;
+    font-size: 1.4375rem;
+    line-height: 1.5217391304;
+    margin: 0 0 1.5217391304em;
+    padding-left: 1.347826087em;
+  }
 
-	body:not(.search-results) .entry-summary blockquote:not(.alignleft):not(.alignright) {
-		margin-left: -1.52173913em;
-	}
+  /* line 3623, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary blockquote:not(.alignleft):not(.alignright) {
+    margin-left: -1.52173913em;
+  }
 
-	body:not(.search-results) .entry-summary blockquote blockquote:not(.alignleft):not(.alignright) {
-		margin-left: 0;
-	}
+  /* line 3627, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary blockquote blockquote:not(.alignleft):not(.alignright) {
+    margin-left: 0;
+  }
 
-	body:not(.search-results) .entry-summary blockquote cite,
-	body:not(.search-results) .entry-summary blockquote small {
-		font-size: 19px;
-		font-size: 1.1875rem;
-		line-height: 1.8421052632;
-	}
+  /* line 3631, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary blockquote cite,
+  body:not(.search-results) .entry-summary blockquote small {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.8421052632;
+  }
 
-	body:not(.search-results) .entry-summary th,
-	body:not(.search-results) .entry-summary td {
-		padding: 0.3043478261em;
-	}
+  /* line 3638, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary th,
+  body:not(.search-results) .entry-summary td {
+    padding: 0.3043478261em;
+  }
 
-	body:not(.search-results) .entry-summary pre {
-		font-size: 16px;
-		font-size: 1rem;
-		line-height: 1.75;
-		margin-bottom: 1.75em;
-		padding: 1.75em;
-	}
+  /* line 3643, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary pre {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1.75em;
+    padding: 1.75em;
+  }
 
-	body:not(.search-results) .entry-summary fieldset {
-		margin-bottom: 1.5217391304em;
-		padding: 0.3043478261em;
-	}
+  /* line 3651, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary fieldset {
+    margin-bottom: 1.5217391304em;
+    padding: 0.3043478261em;
+  }
 
-	body:not(.search-results) .entry-summary h1 {
-		margin-top: 2.121212121em;
-		margin-bottom: 1.060606061em;
-	}
+  /* line 3656, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary h1 {
+    margin-top: 2.121212121em;
+    margin-bottom: 1.060606061em;
+  }
 
-	body:not(.search-results) .entry-summary h2 {
-		margin-top: 2.5em;
-		margin-bottom: 1.25em;
-	}
+  /* line 3661, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary h2 {
+    margin-top: 2.5em;
+    margin-bottom: 1.25em;
+  }
 
-	body:not(.search-results) .entry-summary h3 {
-		margin-top: 3.043478261em;
-		margin-bottom: 1.52173913em;
-	}
+  /* line 3666, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary h3 {
+    margin-top: 3.043478261em;
+    margin-bottom: 1.52173913em;
+  }
 
-	body:not(.search-results) .entry-summary h4,
-	body:not(.search-results) .entry-summary h5,
-	body:not(.search-results) .entry-summary h6 {
-		margin-top: 3.684210526em;
-		margin-bottom: 1.842105263em;
-	}
+  /* line 3671, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary h4,
+  body:not(.search-results) .entry-summary h5,
+  body:not(.search-results) .entry-summary h6 {
+    margin-top: 3.684210526em;
+    margin-bottom: 1.842105263em;
+  }
 
-	body:not(.search-results) .entry-summary h1:first-child,
-	body:not(.search-results) .entry-summary h2:first-child,
-	body:not(.search-results) .entry-summary h3:first-child,
-	body:not(.search-results) .entry-summary h4:first-child,
-	body:not(.search-results) .entry-summary h5:first-child,
-	body:not(.search-results) .entry-summary h6:first-child {
-		margin-top: 0;
-	}
+  /* line 3678, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary h1:first-child,
+  body:not(.search-results) .entry-summary h2:first-child,
+  body:not(.search-results) .entry-summary h3:first-child,
+  body:not(.search-results) .entry-summary h4:first-child,
+  body:not(.search-results) .entry-summary h5:first-child,
+  body:not(.search-results) .entry-summary h6:first-child {
+    margin-top: 0;
+  }
 
-	body:not(.search-results) .entry-summary .alignleft {
-		margin: 0.2608695652em 1.5217391304em 1.5217391304em 0;
-	}
+  /* line 3687, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary .alignleft {
+    margin: 0.2608695652em 1.5217391304em 1.5217391304em 0;
+  }
 
-	body:not(.search-results) .entry-summary .alignright {
-		margin: 0.2608695652em 0 1.5217391304em 1.5217391304em;
-	}
+  /* line 3691, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary .alignright {
+    margin: 0.2608695652em 0 1.5217391304em 1.5217391304em;
+  }
 
-	body:not(.search-results) .entry-summary .aligncenter {
-		margin-bottom: 1.5217391304em;
-	}
+  /* line 3695, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-summary .aligncenter {
+    margin-bottom: 1.5217391304em;
+  }
 }
-
-
 /**
  * 15.0 - Print
  */
-
 @media print {
-	form,
-	button,
-	input,
-	select,
-	textarea,
-	.navigation,
-	.main-navigation,
-	.social-navigation,
-	.sidebar,
-	.content-bottom-widgets,
-	.header-image,
-	.page-links,
-	.edit-link,
-	.comment-respond,
-	.comment-edit-link,
-	.comment-reply-link,
-	.comment-metadata .edit-link,
-	.pingback .edit-link {
-		display: none;
-	}
+  /* line 3706, src/compass/sass/vendor/_twenty-sixteen.scss */
+  form,
+  button,
+  input,
+  select,
+  textarea,
+  .navigation,
+  .main-navigation,
+  .social-navigation,
+  .sidebar,
+  .content-bottom-widgets,
+  .header-image,
+  .page-links,
+  .edit-link,
+  .comment-respond,
+  .comment-edit-link,
+  .comment-reply-link,
+  .comment-metadata .edit-link,
+  .pingback .edit-link {
+    display: none;
+  }
 
-	body,
-	blockquote cite,
-	blockquote small,
-	pre,
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6,
-	.entry-summary h4,
-	.entry-summary h5,
-	.entry-summary h6,
-	.comment-content h4,
-	.comment-content h5,
-	.comment-content h6,
-	.entry-content .author-title {
-		font-size: 12pt;
-	}
+  /* line 3727, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body,
+  blockquote cite,
+  blockquote small,
+  pre,
+  .entry-content h4,
+  .entry-content h5,
+  .entry-content h6,
+  .entry-summary h4,
+  .entry-summary h5,
+  .entry-summary h6,
+  .comment-content h4,
+  .comment-content h5,
+  .comment-content h6,
+  .entry-content .author-title {
+    font-size: 12pt;
+  }
 
-	blockquote {
-		font-size: 14.25pt;
-	}
+  /* line 3744, src/compass/sass/vendor/_twenty-sixteen.scss */
+  blockquote {
+    font-size: 14.25pt;
+  }
 
-	.site-title,
-	.page-title,
-	.comments-title,
-	.entry-content h2,
-	.entry-summary h2,
-	.comment-content h2,
-	.widecolumn h2 {
-		font-size: 17.25pt;
-	}
+  /* line 3748, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-title,
+  .page-title,
+  .comments-title,
+  .entry-content h2,
+  .entry-summary h2,
+  .comment-content h2,
+  .widecolumn h2 {
+    font-size: 17.25pt;
+  }
 
-	.site-description {
-		display: block;
-	}
+  /* line 3758, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-description {
+    display: block;
+  }
 
-	.entry-title {
-		font-size: 24.75pt;
-		line-height: 1.2727272727;
-		margin-bottom: 1.696969697em;
-	}
+  /* line 3762, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-title {
+    font-size: 24.75pt;
+    line-height: 1.2727272727;
+    margin-bottom: 1.696969697em;
+  }
 
-	.format-aside .entry-title,
-	.format-image .entry-title,
-	.format-video .entry-title,
-	.format-quote .entry-title,
-	.format-gallery .entry-title,
-	.format-status .entry-title,
-	.format-link .entry-title,
-	.format-audio .entry-title,
-	.format-chat .entry-title {
-		font-size: 17.25pt;
-		line-height: 1.304347826;
-		margin-bottom: 1.826086957em;
-	}
+  /* line 3768, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .format-aside .entry-title,
+  .format-image .entry-title,
+  .format-video .entry-title,
+  .format-quote .entry-title,
+  .format-gallery .entry-title,
+  .format-status .entry-title,
+  .format-link .entry-title,
+  .format-audio .entry-title,
+  .format-chat .entry-title {
+    font-size: 17.25pt;
+    line-height: 1.304347826;
+    margin-bottom: 1.826086957em;
+  }
 
-	.entry-content h1,
-	.entry-summary h1,
-	.comment-content h1 {
-		font-size: 21pt;
-	}
+  /* line 3782, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content h1,
+  .entry-summary h1,
+  .comment-content h1 {
+    font-size: 21pt;
+  }
 
-	.entry-content h3,
-	.entry-summary h3,
-	.comment-content h3,
-	body:not(.search-results) .entry-summary {
-		font-size: 14.25pt;
-	}
+  /* line 3788, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content h3,
+  .entry-summary h3,
+  .comment-content h3,
+  body:not(.search-results) .entry-summary {
+    font-size: 14.25pt;
+  }
 
-	.site-description,
-	.author-bio,
-	.entry-footer,
-	.sticky-post,
-	.taxonomy-description,
-	.entry-caption,
-	.comment-metadata,
-	.comment-notes,
-	.comment-awaiting-moderation,
-	.site-info,
-	.wp-caption .wp-caption-text,
-	.gallery-caption {
-		font-size: 9.75pt;
-	}
+  /* line 3795, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-description,
+  .author-bio,
+  .entry-footer,
+  .sticky-post,
+  .taxonomy-description,
+  .entry-caption,
+  .comment-metadata,
+  .comment-notes,
+  .comment-awaiting-moderation,
+  .site-info,
+  .wp-caption .wp-caption-text,
+  .gallery-caption {
+    font-size: 9.75pt;
+  }
 
-	body,
-	.site {
-		background: none !important; /* Brute force since user agents all print differently. */
-	}
+  /* line 3810, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body,
+  .site {
+    background: none !important;
+    /* Brute force since user agents all print differently. */
+  }
 
-	body,
-	blockquote cite,
-	blockquote small,
-	.site-branding .site-title a,
-	.entry-title a,
-	.comment-author {
-		color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
-	}
+  /* line 3815, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body,
+  blockquote cite,
+  blockquote small,
+  .site-branding .site-title a,
+  .entry-title a,
+  .comment-author {
+    color: #1a1a1a !important;
+    /* Make sure color schemes don't affect to print */
+  }
 
-	blockquote,
-	.page-header,
-	.comments-title {
-		border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
-	}
+  /* line 3824, src/compass/sass/vendor/_twenty-sixteen.scss */
+  blockquote,
+  .page-header,
+  .comments-title {
+    border-color: #1a1a1a !important;
+    /* Make sure color schemes don't affect to print */
+  }
 
-	blockquote,
-	.site-description,
-	body:not(.search-results) .entry-summary,
-	body:not(.search-results) .entry-summary blockquote,
-	.author-bio,
-	.entry-footer,
-	.entry-footer a,
-	.sticky-post,
-	.taxonomy-description,
-	.entry-caption,
-	.comment-author,
-	.comment-metadata a,
-	.comment-notes,
-	.comment-awaiting-moderation,
-	.site-info,
-	.site-info a,
-	.wp-caption .wp-caption-text,
-	.gallery-caption {
-		color: #686868 !important; /* Make sure color schemes don't affect to print */
-	}
+  /* line 3830, src/compass/sass/vendor/_twenty-sixteen.scss */
+  blockquote,
+  .site-description,
+  body:not(.search-results) .entry-summary,
+  body:not(.search-results) .entry-summary blockquote,
+  .author-bio,
+  .entry-footer,
+  .entry-footer a,
+  .sticky-post,
+  .taxonomy-description,
+  .entry-caption,
+  .comment-author,
+  .comment-metadata a,
+  .comment-notes,
+  .comment-awaiting-moderation,
+  .site-info,
+  .site-info a,
+  .wp-caption .wp-caption-text,
+  .gallery-caption {
+    color: #686868 !important;
+    /* Make sure color schemes don't affect to print */
+  }
 
-	code,
-	hr {
-		background-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
-	}
+  /* line 3851, src/compass/sass/vendor/_twenty-sixteen.scss */
+  code,
+  hr {
+    background-color: #d1d1d1 !important;
+    /* Make sure color schemes don't affect to print */
+  }
 
-	pre,
-	abbr,
-	acronym,
-	table,
-	th,
-	td,
-	.author-info,
-	.comment-list article,
-	.comment-list .pingback,
-	.comment-list .trackback,
-	.no-comments {
-		border-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
-	}
+  /* line 3856, src/compass/sass/vendor/_twenty-sixteen.scss */
+  pre,
+  abbr,
+  acronym,
+  table,
+  th,
+  td,
+  .author-info,
+  .comment-list article,
+  .comment-list .pingback,
+  .comment-list .trackback,
+  .no-comments {
+    border-color: #d1d1d1 !important;
+    /* Make sure color schemes don't affect to print */
+  }
 
-	a {
-		color: #007acc !important; /* Make sure color schemes don't affect to print */
-	}
+  /* line 3870, src/compass/sass/vendor/_twenty-sixteen.scss */
+  a {
+    color: #007acc !important;
+    /* Make sure color schemes don't affect to print */
+  }
 
-	.entry-content a,
-	.entry-summary a,
-	.taxonomy-description a,
-	.comment-content a,
-	.pingback .comment-body > a {
-		box-shadow: none;
-		border-bottom: 1px solid #007acc !important; /* Make sure color schemes don't affect to print */
-	}
+  /* line 3874, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content a,
+  .entry-summary a,
+  .taxonomy-description a,
+  .comment-content a,
+  .pingback .comment-body > a {
+    box-shadow: none;
+    border-bottom: 1px solid #007acc !important;
+    /* Make sure color schemes don't affect to print */
+  }
 
-	.site {
-		margin: 5%;
-	}
+  /* line 3883, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site {
+    margin: 5%;
+  }
 
-	.site-inner {
-		max-width: none;
-	}
+  /* line 3887, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-inner {
+    max-width: none;
+  }
 
-	.site-header {
-		padding: 0 0 1.75em;
-	}
+  /* line 3891, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-header {
+    padding: 0 0 1.75em;
+  }
 
-	.site-branding {
-		margin-top: 0;
-		margin-bottom: 1.75em;
-	}
+  /* line 3895, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-branding {
+    margin-top: 0;
+    margin-bottom: 1.75em;
+  }
 
-	.site-main {
-		margin-bottom: 3.5em;
-	}
+  /* line 3900, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-main {
+    margin-bottom: 3.5em;
+  }
 
-	.entry-header,
-	.entry-footer,
-	.page-header,
-	.page-content,
-	.entry-content,
-	.entry-summary,
-	.post-thumbnail,
-	.comments-area {
-		margin-right: 0;
-		margin-left: 0;
-	}
+  /* line 3904, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-header,
+  .entry-footer,
+  .page-header,
+  .page-content,
+  .entry-content,
+  .entry-summary,
+  .post-thumbnail,
+  .comments-area {
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-	.post-thumbnail,
-	.site-main > article {
-		margin-bottom: 3.5em;
-	}
+  /* line 3916, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .post-thumbnail,
+  .site-main > article {
+    margin-bottom: 3.5em;
+  }
 
-	.entry-content blockquote.alignleft,
-	.entry-content blockquote.alignright {
-		border-width: 4px 0 0 0;
-		padding: 0.9473684211em 0 0;
-		width: -webkit-calc(50% - 0.736842105em);
-		width: calc(50% - 0.736842105em);
-	}
+  /* line 3921, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .entry-content blockquote.alignleft,
+  .entry-content blockquote.alignright {
+    border-width: 4px 0 0 0;
+    padding: 0.9473684211em 0 0;
+    width: -webkit-calc(50% - 0.736842105em);
+    width: calc(50% - 0.736842105em);
+  }
 
-	body:not(.search-results) .entry-header + .entry-summary {
-		margin-top: -1.473684211em;
-	}
+  /* line 3929, src/compass/sass/vendor/_twenty-sixteen.scss */
+  body:not(.search-results) .entry-header + .entry-summary {
+    margin-top: -1.473684211em;
+  }
 
-	.site-footer,
-	.widecolumn {
-		padding: 0;
-	}
+  /* line 3933, src/compass/sass/vendor/_twenty-sixteen.scss */
+  .site-footer,
+  .widecolumn {
+    padding: 0;
+  }
 }
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 2, src/compass/sass/modules/_accessibility.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+/* line 9, src/compass/sass/modules/_accessibility.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+/* line 30, src/compass/sass/modules/_accessibility.scss */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/modules/_alignments.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 7, src/compass/sass/modules/_alignments.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 13, src/compass/sass/modules/_alignments.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/modules/_clearings.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 16, src/compass/sass/modules/_clearings.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/site/secondary/_widgets.scss */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+/* line 5, src/compass/sass/site/secondary/_widgets.scss */
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/site/primary/_posts-and-pages.scss */
+.sticky {
+  display: block;
+}
+
+/* line 5, src/compass/sass/site/primary/_posts-and-pages.scss */
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+/* line 9, src/compass/sass/site/primary/_posts-and-pages.scss */
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+/* line 14, src/compass/sass/site/primary/_posts-and-pages.scss */
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+/* line 19, src/compass/sass/site/primary/_posts-and-pages.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+/* line 25, src/compass/sass/site/primary/_posts-and-pages.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/site/primary/_comments.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* line 4, src/compass/sass/site/primary/_comments.scss */
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 2, src/compass/sass/modules/_infinite-scroll.scss */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, src/compass/sass/modules/_infinite-scroll.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/media/_media.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 11, src/compass/sass/media/_media.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/media/_captions.scss */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+/* line 5, src/compass/sass/media/_captions.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 9, src/compass/sass/media/_captions.scss */
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+/* line 14, src/compass/sass/media/_captions.scss */
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 1, src/compass/sass/media/_galleries.scss */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+/* line 5, src/compass/sass/media/_galleries.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+/* line 11, src/compass/sass/media/_galleries.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+/* line 15, src/compass/sass/media/_galleries.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+/* line 19, src/compass/sass/media/_galleries.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+/* line 23, src/compass/sass/media/_galleries.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+/* line 27, src/compass/sass/media/_galleries.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+/* line 31, src/compass/sass/media/_galleries.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+/* line 35, src/compass/sass/media/_galleries.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+/* line 39, src/compass/sass/media/_galleries.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+/* line 44, src/compass/sass/media/_galleries.scss */
+.gallery-caption {
+  display: block;
+}
+
+/*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
+/* line 19, src/compass/sass/vendor/_swipebox.scss */
+html.swipebox-html.swipebox-touch {
+  overflow: hidden !important;
+}
+
+/* line 23, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-overlay img {
+  border: none !important;
+}
+
+/* line 27, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999 !important;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* line 38, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 44, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider {
+  transition: transform 0.4s ease;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+/* line 55, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider .slide {
+  height: 100%;
+  width: 100%;
+  line-height: 1px;
+  text-align: center;
+  display: inline-block;
+}
+/* line 62, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider .slide:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+/* line 70, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider .slide img,
+#swipebox-slider .slide .swipebox-video-container,
+#swipebox-slider .slide .swipebox-inline-container {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+/* line 83, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider .slide .swipebox-video-container {
+  background: none;
+  max-width: 1140px;
+  max-height: 100%;
+  width: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+}
+/* line 90, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider .slide .swipebox-video-container .swipebox-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 96, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider .slide .swipebox-video-container .swipebox-video iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 106, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-slider .slide-loading {
+  background: url(src/img/loader.gif) no-repeat center center;
+}
+
+/* line 112, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-bottom-bar,
+#swipebox-top-bar {
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+}
+
+/* line 122, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-bottom-bar {
+  bottom: -50px;
+}
+/* line 125, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-bottom-bar.visible-bars {
+  transform: translate3d(0, -50px, 0);
+}
+
+/* line 130, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-top-bar {
+  top: -50px;
+}
+/* line 133, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-top-bar.visible-bars {
+  transform: translate3d(0, 50px, 0);
+}
+
+/* line 138, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 144, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-prev,
+#swipebox-next,
+#swipebox-close {
+  background-image: url(src/img/icons.png);
+  background-repeat: no-repeat;
+  border: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  top: 0;
+}
+
+/* line 158, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-arrows {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+}
+
+/* line 165, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-prev {
+  background-position: -32px 13px;
+  float: left;
+}
+
+/* line 170, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-next {
+  background-position: -78px 13px;
+  float: right;
+}
+
+/* line 175, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-close {
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 9999;
+  background-position: 15px 12px;
+}
+
+/* line 183, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-no-close-button #swipebox-close {
+  display: none;
+}
+
+/* line 189, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-prev.disabled,
+#swipebox-next.disabled {
+  opacity: 0.3;
+}
+
+/* line 195, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-no-touch #swipebox-overlay.rightSpring #swipebox-slider {
+  animation: rightSpring 0.3s;
+}
+/* line 199, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-no-touch #swipebox-overlay.leftSpring #swipebox-slider {
+  animation: leftSpring 0.3s;
+}
+
+/* line 206, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-touch #swipebox-container:before, .swipebox-touch #swipebox-container:after {
+  backface-visibility: hidden;
+  transition: all .3s ease;
+  content: ' ';
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  opacity: 0;
+}
+/* line 219, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-touch #swipebox-container:before {
+  left: 0;
+  box-shadow: inset 10px 0px 10px -8px #656565;
+}
+/* line 224, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-touch #swipebox-container:after {
+  right: 0;
+  box-shadow: inset -10px 0px 10px -8px #656565;
+}
+/* line 231, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-touch #swipebox-overlay.leftSpringTouch #swipebox-container:before {
+  opacity: 1;
+}
+/* line 238, src/compass/sass/vendor/_swipebox.scss */
+.swipebox-touch #swipebox-overlay.rightSpringTouch #swipebox-container:after {
+  opacity: 1;
+}
+
+@keyframes rightSpring {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -30px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes leftSpring {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 30px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  /* line 274, src/compass/sass/vendor/_swipebox.scss */
+  #swipebox-close {
+    right: 10px;
+  }
+
+  /* line 278, src/compass/sass/vendor/_swipebox.scss */
+  #swipebox-arrows {
+    width: 92%;
+    max-width: 800px;
+  }
+}
+/* Skin 
+--------------------------*/
+/* line 286, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-overlay {
+  background: #0d0d0d;
+}
+
+/* line 290, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-bottom-bar,
+#swipebox-top-bar {
+  text-shadow: 1px 1px 1px black;
+  background: #000;
+  opacity: 0.95;
+}
+
+/* line 302, src/compass/sass/vendor/_swipebox.scss */
+#swipebox-top-bar {
+  color: white !important;
+  font-size: 15px;
+  line-height: 43px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/********************************************************************
+ = The actual custom CSS for the site   *********
+*********************************************************************/
