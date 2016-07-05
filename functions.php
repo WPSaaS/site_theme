@@ -362,6 +362,12 @@ function wpsaas_hex2rgb( $color ) {
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Hooks
+ */
+require get_template_directory() . '/inc/hooks/footer.php';
+
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';

@@ -17,13 +17,14 @@ WPSaaS is based on Twenty Sixteen is distributed under the terms of the GNU GPL 
 
 */
 
-
-@import "vendor/twenty-sixteen";
-
-@import "vendor/swipebox";
-
 /********************************************************************
  = The actual custom CSS for the site   *********
 *********************************************************************/
 
 @import "custom";
+
+/********************************************************************
+ = Plugins   *********
+*********************************************************************/
+
+@import "vendor/swipebox";

@@ -2005,7 +2005,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .page-header {
 	border-top: 4px solid #1a1a1a;
-	margin: 0 7.6923% 3.5em;
+	margin: 0 7.6923% 1.0em;
 	padding-top: 1.75em;
 }
 
@@ -3396,7 +3396,7 @@ p > video {
 
 	.entry-title {
 		font-size: 40px;
-		font-size: 2.5rem;
+		font-size: 2.0rem;
 		line-height: 1.225;
 		margin-bottom: 1.05em;
 	}
@@ -3499,8 +3499,8 @@ p > video {
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content {
-		float: right;
-		width: 71.42857144%;
+		float: left;
+		width: 100%;
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {

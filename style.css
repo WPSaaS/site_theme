@@ -16,6 +16,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 WPSaaS is based on Twenty Sixteen is distributed under the terms of the GNU GPL v2 or later.
 
 */
+/********************************************************************
+ = The actual custom CSS for the site   *********
+*********************************************************************/
 /**
  * Table of Contents
  *
@@ -2281,7 +2284,7 @@ body:not(.search-results) .entry-summary > :last-child,
 /* line 2006, src/compass/sass/vendor/_twenty-sixteen.scss */
 .page-header {
   border-top: 4px solid #1a1a1a;
-  margin: 0 7.6923% 3.5em;
+  margin: 0 7.6923% 1.0em;
   padding-top: 1.75em;
 }
 
@@ -3857,7 +3860,7 @@ p > video {
   /* line 3397, src/compass/sass/vendor/_twenty-sixteen.scss */
   .entry-title {
     font-size: 40px;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     line-height: 1.225;
     margin-bottom: 1.05em;
   }
@@ -3973,8 +3976,8 @@ p > video {
 
   /* line 3501, src/compass/sass/vendor/_twenty-sixteen.scss */
   body:not(.search-results) article:not(.type-page) .entry-content {
-    float: right;
-    width: 71.42857144%;
+    float: left;
+    width: 100%;
   }
 
   /* line 3506, src/compass/sass/vendor/_twenty-sixteen.scss */
@@ -4469,6 +4472,19 @@ p > video {
     padding: 0;
   }
 }
+/* line 4, src/compass/sass/_custom.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 8, src/compass/sass/_custom.scss */
+.italic {
+  font-style: italic;
+}
+
+/********************************************************************
+ = Plugins   *********
+*********************************************************************/
 /*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
 /* line 19, src/compass/sass/vendor/_swipebox.scss */
 html.swipebox-html.swipebox-touch {
@@ -4756,7 +4772,3 @@ html.swipebox-html.swipebox-touch {
   line-height: 43px;
   font-family: Helvetica, Arial, sans-serif;
 }
-
-/********************************************************************
- = The actual custom CSS for the site   *********
-*********************************************************************/
