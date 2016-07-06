@@ -19,27 +19,23 @@ if ( ! function_exists( 'wpsaas_entry_meta' ) ) :
  */
 function wpsaas_entry_meta() {
 	if ( 'post' === get_post_type() ) {
-		$author_avatar_size = apply_filters( 'wpsaas_author_avatar_size', 49 );
-		printf( '<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
-			get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
-			_x( 'Author', 'Used before post author name.', 'wpsaas' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			get_the_author()
-		);
+//		$author_avatar_size = apply_filters( 'wpsaas_author_avatar_size', 49 );
+//		printf( '<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
+//			get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
+//			_x( 'Author', 'Used before post author name.', 'wpsaas' ),
+//			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+//			get_the_author()
+//		);
 	}
 
-	if ( in_array( get_post_type(), array( 'post', 'attachment' ) ) ) {
-		wpsaas_entry_date();
-	}
-
-	$format = get_post_format();
-	if ( current_theme_supports( 'post-formats', $format ) ) {
-		printf( '<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>',
-			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'wpsaas' ) ),
-			esc_url( get_post_format_link( $format ) ),
-			get_post_format_string( $format )
-		);
-	}
+//	$format = get_post_format();
+//	if ( current_theme_supports( 'post-formats', $format ) ) {
+//		printf( '<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>',
+//			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'wpsaas' ) ),
+//			esc_url( get_post_format_link( $format ) ),
+//			get_post_format_string( $format )
+//		);
+//	}
 
 	if ( 'post' === get_post_type() ) {
 		wpsaas_entry_taxonomies();
@@ -100,7 +96,7 @@ function wpsaas_entry_taxonomies() {
 		);
 	}
 
-	$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'wpsaas' ) );
+	$tags_list = get_the_tag_list( '', _x( ' ', 'Used between list items, there is a space after the comma.', 'wpsaas' ) );
 	if ( $tags_list ) {
 		printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
 			_x( 'Tags', 'Used before tag names.', 'wpsaas' ),
